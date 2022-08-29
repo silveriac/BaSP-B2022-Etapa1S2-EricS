@@ -1,6 +1,6 @@
 # TrackGenix
 
- **TrackGenix is a efficiency and time management app used to track your work team on multiple projects**
+ **TrackGenix is an efficiency and time management app, used to track your work team on multiple projects.** <br />
  This is the landing page for the app
 
  ```
