@@ -1,5 +1,9 @@
-# Employee section 
- No stylesheet, only HTML structure
+# TrackGenix
+
+ **TrackGenix is a efficiency and time management app used to track your work team on multiple projects**
+ This is the landing page for the app
+
  ```
- Open index.html with browser
-```
+ No stylesheet, only HTML structure
+  ```
+
