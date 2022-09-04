@@ -4,28 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Trackgenix</title>
 </head>
 <body>
-    <header>
+    <header class="space-left">
+        <section class="align-right icons-section">
+            <a href="http://linkedin.com" class="padding-icons">
+                <img src= "./assets/LinkedInIcon.png" alt="linkedin icon">
+            </a>
+            <a href="http://instagram.com" class="padding-icons">
+                <img src= "./assets/InstagramIcon.png" alt="Instagram icon">
+            </a>
+            <a href="http://facebook.com" class="padding-icons">
+                <img src= "./assets/FacebookIcon.png" alt="Facebook icon">
+            </a>
+            <a href="http://twitter.com" class="padding-icons">
+                <img src= "./assets/TwitterIcon.png" alt="Twitter icon">
+            </a>
+        </section>
         <h1>
             Trackgenix
         </h1>
-        <a href="http://linkedin.com">
-            <img src= "./assets/LinkedInIcon.png" alt="linkedin icon">
-        </a>
-        <a href="http://instagram.com">
-            <img src= "./assets/InstagramIcon.png" alt="Instagram icon">
-        </a>
-        <a href="http://facebook.com">
-            <img src= "./assets/FacebookIcon.png" alt="Facebook icon">
-        </a>
-        <a href="http://twitter.com">
-            <img src= "./assets/TwitterIcon.png" alt="Twitter icon">
-        </a>
+        <p class="align-center">
+            By GigaTech Software Solutions
+        </p>
     </header>
-    <aside>
+    <aside class="sidebar"> <!--SIDEBAR-->
         <fieldset>
             <input type="search" placeholder="Search">
         </fieldset>
@@ -37,24 +43,21 @@
         <p>
             Contact us
         </p>
-        <a href="#">
+        <a href="#" class="block">
             <img src="assets/MailIconsmallblack.png" alt="mail icon"></img>
             contacto@contacto.com
         </a>
-        <a href="https://goo.gl/maps/VoCbYdzDUvWL9Vr19">
+        <a href="https://goo.gl/maps/VoCbYdzDUvWL9Vr19" class="block">
             <img src="assets/BuildingIconsmallblack.png" alt="mail icon"></img>
             Av. 18 de Julio 5555, Montevideo, Uruguay
         </a>
-    </aside>
-    <main>
-        <section>
-            <p>
-                By GigaTech Software Solutions
-            </p>
-            <h2>
-                Keep track of your employees' progress
+    </aside> <!--END OFSIDEBAR-->
+    <main class="space-left">
+        <section class="medium-gray top-padding">
+            <h2 class="overlay">
+                Keep track of your employees' progress easily
             </h2>
-            <img src="./assets/main-image.jpg" alt="main image">
+            <img src="./assets/main-image.jpg" alt="main image" class="rounded-right-side">
             <p>
                 Our HR management software will allow you to have a traceability of your employees, manage teams easily and
                 take your leadership to the next level.
@@ -87,8 +90,6 @@
             <p>
                 Decision making
             </p>
-        </section>
-        <section>
             <ul>
                 <li><a href="#">Hour log</a></li>
                 <li><a href="#">Reports</a></li>
@@ -96,7 +97,7 @@
                 <li><a href="#">Multiple roles</a></li>
             </ul>
         </section>
-        <section>
+        <section class="light-gray">
             <h2 id="aboutus">
                 How GigaTech was born
             </h2>
@@ -111,7 +112,7 @@
                 2022 in the Trackathon Awards for companies in the field of Logistics.
             </p>
         </section>
-        <section id="contact">
+        <section id="contact" class="light-gray">
             <p>
                 Request system information
             </p>
@@ -156,7 +157,7 @@
                 </fieldset>      
             </form>
         </section>
-        <section>
+        <section class="light-gray">
             <p>
                 Our Product
             </p>
@@ -187,19 +188,21 @@
         </section>
     </main>
     <footer>
-        <a href="http://linkedin.com">
-            <img src= "./assets/LinkedInIcon.png" alt="linkedin icon">
-        </a>
-        <a href="http://instagram.com">
-            <img src= "./assets/InstagramIcon.png" alt="Instagram icon">
-        </a>
-        <a href="http://facebook.com">
-            <img src= "./assets/FacebookIcon.png" alt="Facebook icon">
-        </a>
-        <a href="http://twitter.com">
-            <img src= "./assets/TwitterIcon.png" alt="Twitter icon">
-        </a>
-        <p>Copyright © 2022 GigaTech Software Solutions. All right reserved</p>
+        <div class="align-center">
+            <a href="http://linkedin.com">
+                <img src= "./assets/LinkedInIcon.png" alt="linkedin icon">
+            </a>
+            <a href="http://instagram.com">
+                <img src= "./assets/InstagramIcon.png" alt="Instagram icon">
+            </a>
+            <a href="http://facebook.com">
+                <img src= "./assets/FacebookIcon.png" alt="Facebook icon">
+            </a>
+            <a href="http://twitter.com">
+                <img src= "./assets/TwitterIcon.png" alt="Twitter icon">
+            </a>
+            <p>Copyright © 2022 GigaTech Software Solutions. All right reserved</p>
+        </div>
     </footer>
 </body>
 </html>
