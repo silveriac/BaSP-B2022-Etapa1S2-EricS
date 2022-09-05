@@ -32,7 +32,7 @@
         </p>
     </header>
     <aside class="sidebar"> <!--SIDEBAR-->
-        <div class="nav">
+        <section class="nav">
             <fieldset>
                 <input type="search" placeholder="Search">
             </fieldset>
@@ -41,8 +41,8 @@
                 <li><a href="#">Sign up</a></li>
                 <li><a href="#">Log in</a></li>
             </ul>
-        </div>
-        <div class="contact-info">
+        </section>
+        <section class="contact-info">
             <p>
                 Contact us
             </p>
@@ -54,19 +54,19 @@
                 <img src="assets/BuildingIconsmallblack.png" alt="mail icon"></img>
                 Av. 18 de Julio 5555, Montevideo, Uruguay
             </a>
-        </div>
+        </section>
     </aside> <!--END OFSIDEBAR-->
     <main class="space-left">
         <section class="medium-gray top-padding">
             <h2 class="overlay-1">
                 Keep track of your employees' progress easily
             </h2>
-            <div  class="green-bubble">
+            <section  class="green-bubble">
                 <p>
                     Our HR management software will allow you to have a traceability of your employees, manage teams
                     easily and take your leadership to the next level.
                 </p>
-            </div>
+            </section>
             <img src="./assets/main-image.jpg" alt="main image" class="main-img">
         </section>
         <section class="medium-gray top-padding why-tg">
@@ -89,52 +89,74 @@
             </p>
         </section>
         <section class="medium-gray bubbles">
-            <div class="weird-bubbles">
+            <section class="weird-bubbles">
                 <p>
                     Productivity <span class="green-text">enhancer</span>
                 </p>
-            </div>
-            <div class="weird-bubbles bubble-right">
+            </section>
+            <section class="weird-bubbles bubble-right">
                 <p>
                  Progress <span class="green-text">tracker</span>
                 </p>
-            </div>
-            <div class="weird-bubbles">
+            </section>
+            <section class="weird-bubbles">
                 <p>
                     <span class="green-text">Leadership</span> and team management
                 </p>
-            </div>
-            <div class="weird-bubbles bubble-right">
+            </section>
+            <section class="weird-bubbles bubble-right">
                 <p>
                     Decision <span class="green-text">making</span>
                 </p>
-            </div>
+            </section>
         </section>
-        <section class="squares">
+        <section class="medium-gray squares">
             <ul>
-                <li><a href="#">Hour log</a></li>
-                <li><a href="#">Reports</a></li>
-                <li><a href="#">Resource management</a></li>
-                <li><a href="#">Multiple roles</a></li>
+                <li class="green-square">
+                    <a href="#">
+                        Hour log
+                        <img src="assets/hourlog.png" alt="hour log icon">
+                    </a>
+                </li>
+                <li class="green-square">
+                    <a href="#">
+                        Reports
+                        <img src="assets/reports.png" alt="reports icon">
+                    </a>
+                </li>
+                <li class="green-square">
+                    <a href="#">
+                        Resource management
+                        <img src="assets/resource-m.png" alt="hour log icon">
+                    </a>
+                </li>
+                <li class="green-square">
+                    <a href="#">
+                        Multiple roles
+                        <img src="assets/multipleroles.png" alt="roles icon">
+                    </a>
+                </li>
             </ul>
         </section>
-        <section class="light-gray">
-            <h3 id="aboutus">
-                How GigaTech was born
-            </h3>
-            <p>
-                In 2021, a journey began in Montevideo, Uruguay. Fulanito Mengano Rodriguez, our beloved CEO and founder
-                of the company, noticed the business he worked for could use some help and started giving out Excel sheets
-                to his fellow teammates in order to manage their teams efficiently.
-                Eventually, it became a business idea on it's own.
-                Since then, we have been striving to help improve  our customers productivity rates, branching out into
-                software solutions of all kinds. Our patented strategies and diversity of layout sheets have enabled us to
-                reach over 150 companies in the span of only 6 months, granting us the title of Fastest Growing Company of
-                2022 in the Trackathon Awards for companies in the field of Logistics.
-            </p>
+        <section class="cover">
+            <article class="light-gray gt-history">
+                <h3 id="aboutus">
+                    How GigaTech was born
+                </h3>
+                <p>
+                    In 2021, a journey began in Montevideo, Uruguay. Fulanito Mengano Rodriguez, our beloved CEO and founder
+                    of the company, noticed the business he worked for could use some help and started giving out Excel sheets
+                    to his fellow teammates in order to manage their teams efficiently.
+                    Eventually, it became a business idea on it's own.
+                    Since then, we have been striving to help improve  our customers productivity rates, branching out into
+                    software solutions of all kinds. Our patented strategies and diversity of layout sheets have enabled us to
+                    reach over 150 companies in the span of only 6 months, granting us the title of Fastest Growing Company of
+                    2022 in the Trackathon Awards for companies in the field of Logistics.
+                </p>
+            </article>
         </section>
-        <section id="contact" class="light-gray">
-            <p>
+        <section id="contact" class="light-gray contact-form">
+            <p class="title-text">
                 Request system information
             </p>
             <form>
@@ -142,15 +164,15 @@
                     <label>
                         Name
                     </label>
-                    <input type="text">
+                    <input type="text" placeholder="Enter your name">
                 </fieldset>
                 <fieldset>
                     <label>
                         E-mail
                     </label>
-                    <input type="email">
+                    <input type="email" placeholder="Enter your email">
                 </fieldset>
-                <fieldset>
+                <fieldset  class="contact-areas">
                     <p>
                         Contact Area
                     </p>
@@ -209,7 +231,7 @@
         </section>
     </main>
     <footer>
-        <div class="align-center">
+        <section class="align-center">
             <a href="http://linkedin.com">
                 <img src= "./assets/LinkedInIcon.png" alt="linkedin icon">
             </a>
@@ -223,7 +245,7 @@
                 <img src= "./assets/TwitterIcon.png" alt="Twitter icon">
             </a>
             <p>Copyright © 2022 GigaTech Software Solutions. All right reserved</p>
-        </div>
+        </section>
     </footer>
 </body>
 </html>
