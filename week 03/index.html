@@ -160,19 +160,21 @@
                 Request system information
             </p>
             <form>
-                <fieldset>
-                    <label>
-                        Name
-                    </label>
-                    <input type="text" placeholder="Enter your name">
-                </fieldset>
-                <fieldset>
-                    <label>
-                        E-mail
-                    </label>
-                    <input type="email" placeholder="Enter your email">
-                </fieldset>
-                <fieldset  class="contact-areas">
+                <section class="user-contact">
+                    <fieldset>
+                        <label>
+                            Name
+                        </label>
+                        <input type="text" placeholder="Enter your name">
+                    </fieldset>
+                    <fieldset>
+                        <label>
+                            E-mail
+                        </label>
+                        <input type="email" placeholder="Enter your email">
+                    </fieldset>
+                </section>
+                <fieldset class="contact-areas">
                     <p>
                         Contact Area
                     </p>
@@ -193,41 +195,47 @@
                     <label>
                         Message
                     </label>
-                    <textarea placeholder="Enter your message"></textarea>
+                    <input type="text" class="message" placeholder="Enter your message"></input>
                 </fieldset>
                 <fieldset>
-                    <input type="submit" value="Enviar"></input>
+                    <input type="submit" class="send-button" value="Send"></input>
                 </fieldset>      
             </form>
         </section>
-        <section class="light-gray">
-            <p>
-                Our Product
-            </p>
-            <ol>
-                <li><a href="#">Features</a></li>
-                <li><a href="#">Dowloads</a></li>
-                <li><a href="#">Integrations</a></li>
-                <li><a href="#">Extras</a></li>
-            </ol>
-            <p>
-                Company
-            </p>
-            <ol>
-                <li><a href="#aboutus">About us</a></li>
-                <li><a href="#">Customers</a></li>
-                <li><a href="#">Resources</a></li>
-                <li><a href="#">Blog</a></li>
-            </ol>
-            <p>
-                Support
-            </p>
-            <ol>
-                <li><a href="#">Help</a></li>
-                <li><a href="#">Tutorials</a></li>
-                <li><a href="#">API</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ol>
+        <section class="light-gray lists-section">
+            <section class="list">
+                <p>
+                    Our Product
+                </p>
+                <ol>
+                    <li><a href="#">1. Features</a></li>
+                    <li><a href="#">2. Downloads</a></li>
+                    <li><a href="#">3. Integrations</a></li>
+                    <li><a href="#">4. Extras</a></li>
+                </ol>
+            </section>
+            <section class="list">
+                <p>
+                    Company
+                </p>
+                <ol>
+                    <li><a href="#aboutus">1. About us</a></li>
+                    <li><a href="#">2. Customers</a></li>
+                    <li><a href="#">3. Resources</a></li>
+                    <li><a href="#">4. Blog</a></li>
+                </ol>
+            </section>
+            <section class="list">
+                <p>
+                    Support
+                </p>
+                <ol>
+                    <li><a href="#">1. Help</a></li>
+                    <li><a href="#">2. Tutorials</a></li>
+                    <li><a href="#">3. API</a></li>
+                    <li><a href="#contact">4. Contact</a></li>
+                </ol>
+            </section>
         </section>
     </main>
     <footer>

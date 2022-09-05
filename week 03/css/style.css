@@ -218,15 +218,66 @@ header, footer{
     padding: 0px 300px 0px 300px;
     font-size: 20px;
 }
-.contact-form label{
-    display: block;
-    font-size: 20px;
+.user-contact input{
+    width: 350px;
+    height: 35px;
+    border-radius: 5px;
+    border-color:#D9D9D9;
 }
 .contact-form fieldset{
     display: block;
     padding: 20px;
 }
-.contact-areas{
-    display: inline-block;
-    font-size: 5px;
+.contact-form label{
+    display: block;
+    padding-bottom: 10px;
+    font-size: 20px;
 }
+.contact-areas label{
+    display: inline-block;
+    font-size: 15px;
+}
+.contact-areas p{
+    padding-bottom: 15px;
+}
+.message{
+    width: 100%;
+    height: 100px;
+    border-radius: 5px;
+    border-color:#D9D9D9;
+    text-align: left;
+}
+/* doesn't work
+the idea is to vertically align placeholder
+at the top of the field*/
+/*::placeholder{
+    top: 0px;
+    padding: 0px;  
+} */
+.send-button{
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    border-color:#D9D9D9;
+    color: white;
+    font-weight: bolder;
+    font-size: 22px;
+    background-color:#AACE9B;
+}
+.lists-section{
+    padding: 100px 0px 50px 0px;
+    width: 100%;
+}
+.lists-section p{
+    padding: 20px;
+    font-weight: bold;
+}
+.list{
+    padding-left: 120px;
+    display: inline-block;
+    width: 20%;
+}
+.list li{
+    padding-bottom: 10px;
+}
+/*only things missing are sidebar and footer styles*/
