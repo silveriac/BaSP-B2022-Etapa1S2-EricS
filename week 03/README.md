@@ -10,12 +10,12 @@
  *Employees* <br/>
   ```
   If you're an employee, your project manager will asign you projects.
- Open your account you can add the amount of hours you've worked and the corresponding date
+ Once you open your account, you can add the amount of hours you've worked and the corresponding date.
  ```
 
  *Project Managers*  <br/>
   ```
- Once you open your account, you can assign projects to employees
+ Once you open your account, you can assign projects to employees.
  You can also visualize the amount of hours worked by each employee, and manage them by task or date.
  You can add roles to each employee and add or remove tasks from projetcs.
    ```
