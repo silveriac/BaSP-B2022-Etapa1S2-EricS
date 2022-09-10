@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap');
+/* @media screen and(min width: 480px) {
+    main{
+        acá pasan cosas
+    }
+} */
+
+/*GENERAL*/
+
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: #373867;
+}
+header, aside, main, div,  article, form{
+    display: flex;
+}
+section{
+    display: flex;
+}
+
+/* MOBILE */
+.icons-section, .medium-gray, .top-padding, .why-tg, .bubbles, .weird-bubbles, .lists-section, .flex{
+    display: flex;
+    flex-direction: column;
+}
+html{
+    scroll-behavior: smooth;
+    font-family: 'Roboto', 'Sans-serif';
+}
+aside, .main-img, .icons-section{
+    display: none;
+}
+header{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+header img{
+    width: 100%;
+    border-radius: 0% 0% 15% 15%;
+}
+main{
+    flex-direction: column;
+}
+h1{
+    font-size: 60px;
+    padding: 20px;
+    color:white;
+    font-family: inherit, 'Sans-serif';
+    font-weight: bold;
+}
+h2{
+    width: 300px;
+    padding-left: 30px;
+    color: #AACE9B;
+    font-weight: bold;
+    font-size: 40px;
+}
+.user-contact, .contact-areas{
+    flex-direction: row;
+}
+.dots-icon{
+    align-self: flex-end;
+}
+.dots-icon img{
+    filter:invert();
+}
+.by-gt{
+    align-items: flex-end;
+    color: white;
+}
+.green-bubble{
+    margin: 0% 5% 0% 5%;
+    padding: 40px 10px 60px 10px;
+    opacity: 0.8;
+    right: 0px;
+    top: 480px;
+    border-radius: 15%;
+    background-color: #AACE9B;
+    color: #373867;
+    font-size: 50;
+    font-weight: bolder;
+    text-align: center;
+    line-height: 200%;
+}
