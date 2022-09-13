@@ -26,6 +26,10 @@
     aside li{
         padding: 10px;
     }
+    aside p{
+        padding-bottom: 20px;
+        color: white;
+    }
     .nav-icons{
         height: 24px;
         width: auto;
@@ -44,10 +48,6 @@
     }
     .nav-text{
         padding-bottom: 10px;
-    }
-    .sidebar p{
-        padding-bottom: 20px;
-        color: white;
     }
     .padding-icons{
         padding: 5px;
