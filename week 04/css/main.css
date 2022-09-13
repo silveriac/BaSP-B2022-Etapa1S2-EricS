@@ -1,3 +1,13 @@
+main{
+    display: flex;
+}
+/*apply flexbox to all needed sections*/
+.medium-gray, .banner-section, .green-square, .why-tg, .bubbles, .weird-bubbles,
+.squares-section, .lists-section, .gt-history, .contact-form, .user-contact,
+.white-cover, .contact-info-2, .middle-section, .cover{
+    display: flex;
+    flex-direction: column;
+}
 h2{
     width: 70%;
     padding: 0px 25px 25px 25px;
@@ -15,9 +25,22 @@ h3{
 a{
     text-decoration: none;
 }
+main{
+    flex-direction: column;
+}
+fieldset{
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+form{
+    padding: 20px 0px 20px 0px;
+}
 label{
     padding: 15px 0px 15px 0px;
     font-size: 16px;
+}
+.bubbles{
+    display: none;
 }
 .green-bubble{
     align-self: center;
@@ -70,11 +93,15 @@ label{
     border-radius: 8%;
     background-color: #AACE9B;
 }
+.box-4{
+    order:-1;
+}
 .green-square a{
     color: black;
+    padding-bottom: 15px;
     text-align: center;
     font-weight: bolder;
-    font-size: 12px;
+    font-size: 14px;
 }
 .green-square img{
     width: 35%;
@@ -114,10 +141,12 @@ label{
     border-radius: 5px;
 }
 .contact-areas{
+    flex-direction: column;
     flex-wrap: wrap;
-    justify-content:first baseline;
+    justify-content: baseline;
 }
 .contact-areas div{
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     padding: 5px 0px 5px 0px;
@@ -193,7 +222,6 @@ textarea{
     font-size: 12px;
     bottom: 14px;
 }
-
 @media screen and (min-width:480px) {
     h2{
         padding-top: 20px;
@@ -205,7 +233,7 @@ textarea{
         display: block;
         border-radius: 0% 10% 10% 0%;
     }
-    .top-padding{
+    .banner-section{
         padding-top: 40px;
     }
     .overlay-1{
@@ -213,21 +241,16 @@ textarea{
     }
     .green-bubble{
         position: absolute;
-    }
-    .green-bubble{
         right: 0%;
         bottom: 15%;
         width: 40%;
         height: auto;
-        opacity: 0.8;
         margin-right: 2%;
         padding: 10px 5px 15px 5px;
-        border-radius: 20%;
-        background-color: #AACE9B;
-        color: #373867;
         font-size: 15px;
-        text-align: center;
-        line-height: 170%;
+    }
+    .box-4{
+        order:0;
     }
     .green-square{
         margin: 2% 4% 2% 4%;
@@ -237,6 +260,9 @@ textarea{
     .middle-section{
         flex-direction: row;
         padding: 20px;
+    }
+    .why-tg{
+        width: 65%;
     }
     .why-tg h3{
         font-size: 35px;
@@ -251,7 +277,7 @@ textarea{
     .bubbles{
         display: flex;
         justify-content: space-around;
-        width: 30%;
+        width: 35%;
     }
     .weird-bubbles{
         display: flex;
@@ -293,20 +319,82 @@ textarea{
         right: 0%;
         bottom: 0%;
         width: 30%;
-        height: auto;
-        opacity: 0.8;
-        margin-right: 2%;
         padding: 20px 10px 30px 10px;
-        border-radius: 20%;
-        background-color: #AACE9B;
-        color: #373867;
-        font-size: 15px;
-        text-align: center;
-        line-height: 170%;
     }
     .green-square{
         margin: 2% 9% 2% 9%;
         width: 210px;
         height: 210px;
+    }
+}
+@media screen and (min-width: 1024px){
+    h2{
+        width: 20%;
+        padding-left: 30px;
+        color: #AACE9B;
+        font-weight: bold;
+        font-size: 40px;
+    }
+    .medium-gray,  .squares-section, .middle-section{
+        background-color: #D9D9D9;
+    }
+    .green-bubble{
+        bottom: -15%;
+        width: 20%;
+        margin-right: 0%;
+        border-radius: 10% 0% 0% 10%;
+        font-size: 18px;
+    }
+    .why-tg h3{
+        align-self: center;
+        color: black;
+        font-size: 40px;
+        font-weight: bold;
+    }
+    .why-tg p{
+        color: #373867;
+        line-height: 200%;
+    }
+    .gt-history{
+        order: 0;
+        margin: 5%;
+    }
+    .gt-history h3{
+        padding: 50px;
+        color: #373867;
+        font-size: 40px;
+        font-weight: bolder;
+    }
+    .gt-history p{
+        padding: 40px;
+        font-size: 20px;
+        line-height: 200%;
+        letter-spacing: 150%;
+    }
+    .weird-bubbles{
+        width: 160px;
+        height: 120px;
+        font-size: 20px;
+    }
+    .bubble-right{
+        align-self: flex-end;
+    }
+    .green-square{
+        margin: 1% 0% 1% 0%;
+        width: 180px;
+        height: 180px;
+    }
+    .green-square a{
+        padding: 5px 0px 15px 0px;
+        font-weight: bolder;
+        font-size: 18px;
+    }
+    .title-text{
+        align-self: center;
+        font-size: 30px;
+        font-weight: bold;
+        }
+    .contact-info-2{
+        display: none;
     }
 }

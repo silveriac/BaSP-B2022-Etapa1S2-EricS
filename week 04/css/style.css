@@ -1,33 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap');
-/* @media screen and(min width: 480px) {
-    main{
-        acá pasan cosas
-    }
-} */
-
-/*GENERAL*/
 
 body{
     display: flex;
     flex-direction: column;
     background-color: #373867;
 }
-header, aside, main, section, div,  article, form, fieldset, footer {
+section, div,  article, form, fieldset, footer{
     display: flex;
 }
-main{
-    flex-direction: column;
+a:link, a:visited {
+    text-decoration: none;
 }
-fieldset{
-    flex-direction: column;
-    flex-wrap: wrap;
+a:hover{
+    text-decoration: underline;
 }
-
-/* MOBILE */
-
-.medium-gray, .top-padding, .why-tg, .bubbles, .weird-bubbles, .squares-section,
-.green-square, .lists-section, .gt-history, .contact-form, .user-contact, .white-cover,
-.contact-info-2, .middle-section, .cover{
+a:link, a:visited {
+    text-decoration: none;
+}
+.header-and-main{
     display: flex;
     flex-direction: column;
 }
@@ -38,17 +28,8 @@ html{
     scroll-behavior: smooth;
     font-family: 'Roboto', 'Sans-serif';
 }
-fieldset{
-    flex-wrap: wrap;
+.all-container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
 }
-form{
-    padding: 15px 0px 35px 0px;
-}
-/* HEADER */
-
-
-/* MAIN*/
-
-
-
-/*FOOTER*/
