@@ -1,8 +1,12 @@
 # TrackGenix
 
- ## TrackGenix is an efficiency and time management app, used to track your work team on multiple projects. <br/>
+ ## TrackGenix is an efficiency and time management app, used to track your work team on multiple projects. <br/><br/>
 
  This is the landing page for the app <br/><br/>
+ The page is responsive and has 3 different versions:<br/>
+ Mobile version: up to 480 pixels wide<br/>
+ Tablet version: up to 1024 pixels wide<br/>
+Desktop version: 1024 and up<br/><br/>
   ### How to use<br/>
  Open index.html (right click > open with > your browser) <br/>
  
@@ -34,6 +38,6 @@
    ```
 
  
- Technnology used: HTML
- No stylesheet, only HTML structure<br/><br/>
+ Technnologies used: HTML, CSS, FlexBox<br/><br/>
+
 *Author: Eric Silva*

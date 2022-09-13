@@ -93,9 +93,6 @@ label{
     border-radius: 8%;
     background-color: #AACE9B;
 }
-.box-4{
-    order:-1;
-}
 .green-square a{
     color: black;
     padding-bottom: 15px;
@@ -250,7 +247,7 @@ textarea{
         font-size: 15px;
     }
     .box-4{
-        order:0;
+        order:1;
     }
     .green-square{
         margin: 2% 4% 2% 4%;
