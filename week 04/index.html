@@ -9,30 +9,33 @@
         <link rel="stylesheet" href="./css/header.css">
         <link rel="stylesheet" href="./css/main.css">
         <link rel="stylesheet" href="./css/aside.css">
+        <link rel="stylesheet" href="./css/footer.css">
         <title>Trackgenix</title>
     </head>
     <body>
         <header class="space-left">
-            <section class="align-right icons-section">
-                <a href="http://linkedin.com" class="padding-icons">
-                    <img src= "./assets/LinkedInIcon.png" alt="linkedin icon">
-                </a>
-                <a href="http://instagram.com" class="padding-icons">
-                    <img src= "./assets/InstagramIcon.png" alt="Instagram icon">
-                </a>
-                <a href="http://facebook.com" class="padding-icons">
-                    <img src= "./assets/FacebookIcon.png" alt="Facebook icon">
-                </a>
-                <a href="http://twitter.com" class="padding-icons">
-                    <img src= "./assets/TwitterIcon.png" alt="Twitter icon">
-                </a>
+            <section class="icons-section">
+                <div class="social-media">
+                    <a href="http://linkedin.com" class="padding-icons">
+                        <img src= "./assets/LinkedInIcon.png" alt="linkedin icon">
+                    </a>
+                    <a href="http://instagram.com" class="padding-icons">
+                        <img src= "./assets/InstagramIcon.png" alt="Instagram icon">
+                    </a>
+                    <a href="http://facebook.com" class="padding-icons">
+                        <img src= "./assets/FacebookIcon.png" alt="Facebook icon">
+                    </a>
+                    <a href="http://twitter.com" class="padding-icons">
+                        <img src= "./assets/TwitterIcon.png" alt="Twitter icon">
+                    </a>
+                </div>
+                <div class="dots-icon">
+                    <a href="#">
+                        <img src="./assets/three-dots.png" alt="menu-icon">
+                    </a>
+                </div>
             </section>
-            <div class="dots-icon">
-                <a href="#">
-                    <img src="./assets/three-dots.png" alt="menu-icon">
-                </a>
-            </div>
-            <section class="flex">
+            <section class="main-img-header">
                 <img src="./assets/main-image.jpg" alt="main image">
             </section>
             <h1>
@@ -51,7 +54,7 @@
                     <li>
                         <a href="#">
                             <img class="nav-icons" src="./assets/HomeIcon.png" alt="login-icon"></img>
-                            <span class="nav-text"> Homepage</span> 
+                            <span class="nav-text"> Homepage</span>
                         </a>
                     </li>
                     <li>
@@ -96,48 +99,51 @@
                     </section>
                     <img class="main-img" src="./assets/main-image.jpg" alt="main image" >
                 </section>
-                <section class="top-padding why-tg">
-                    <h3>
-                        Why TrackGenix?
-                    </h3>
-                    <p>
-                        We seek to make the management of the different areas of the companies work in a much simpler and more
-                        efficient way. Our goal is to reduce and optimize considerably the costs associated with the fulfillment of the
-                        working day.
-                    </p>
-                    <p>
-                        We work by streamlining your administrative processes and giving you management tools that dynamize your sales
-                        and improve your quality of service.
-                    </p>
-                    </p>
-                    <p>
-                        With this software you will no longer have to worry about compliance control, since it is a productivity
-                        enhancer that will allow you to focus on what is important:
-                    </p>
-                    <p class="blue-letters business">
-                        DOING YOUR BUSINESS.
-                    </p>
-                </section>
-                <section class="bubbles">
-                    <section class="weird-bubbles">
+            </section>
+                <section class="middle-section">
+                    <section class="why-tg">
+                        <h3>
+                            Why TrackGenix?
+                        </h3>
                         <p>
-                            Productivity <span class="green-text">enhancer</span>
+                            We seek to make the management of the different areas of the companies work in a much simpler and more
+                            efficient way. Our goal is to reduce and optimize considerably the costs associated with the fulfillment of the
+                            working day.
+                        </p>
+                        <p>
+                            We work by streamlining your administrative processes and giving you management tools that dynamize your sales
+                            and improve your quality of service.
+                        </p>
+                        </p>
+                        <p>
+                            With this software you will no longer have to worry about compliance control, since it is a productivity
+                            enhancer that will allow you to focus on what is important:
+                        </p>
+                        <p class="blue-letters business">
+                            DOING YOUR BUSINESS.
                         </p>
                     </section>
-                    <section class="weird-bubbles bubble-right">
-                        <p>
-                            Progress <span class="green-text">tracker</span>
-                        </p>
-                    </section>
-                    <section class="weird-bubbles">
-                        <p>
-                            <span class="green-text">Leadership</span> and team management
-                        </p>
-                    </section>
-                    <section class="weird-bubbles bubble-right">
-                        <p>
-                            Decision <span class="green-text">making</span>
-                        </p>
+                    <section class="bubbles">
+                        <section class="weird-bubbles">
+                            <p>
+                                Productivity <span class="green-text">enhancer</span>
+                            </p>
+                        </section>
+                        <section class="weird-bubbles bubble-right">
+                            <p>
+                                Progress <span class="green-text">tracker</span>
+                            </p>
+                        </section>
+                        <section class="weird-bubbles">
+                            <p>
+                                <span class="green-text">Leadership</span> and team management
+                            </p>
+                        </section>
+                        <section class="weird-bubbles bubble-right">
+                            <p>
+                                Decision <span class="green-text">making</span>
+                            </p>
+                        </section>
                     </section>
                 </section>
                 <section class="squares-section">
@@ -166,7 +172,6 @@
                         <img src="./assets/multipleroles.png" alt="roles icon">
                     </section>
                 </section>
-            </section>
             <section class="cover">
                 <article class="light-gray gt-history">
                     <h3 id="aboutus">
@@ -183,12 +188,10 @@
                         2022 in the Trackathon Awards for companies in the field of Logistics.
                     </p>
                 </article>
-            </section>
-            <section id="contact" class="white-cover">
-                <p class="title-text">
-                    Request system information
-                </p>
-                <form class="contact-form">
+                <form id="contact" class="contact-form white-cover">
+                    <p class="title-text">
+                        Request system information
+                    </p>
                     <section class="user-contact">
                         <fieldset>
                             <label>
@@ -238,6 +241,8 @@
                         <input type="submit" class="send-button" value="Send"></input>
                     </fieldset>
                 </form>
+            </section>
+            <section class="white-cover">
                 <section class="lists-section">
                     <section class="list">
                         <p>
@@ -282,14 +287,14 @@
                     <div>
                         <img class="contact-icons" src="./assets/MailIconsmall.png" alt="mail icon"></img>
                         <a href="#" class="block">
-                        <span class="contact-text">contacto@contacto.com</span>
-                    </a>
+                            <span class="contact-text">contacto@contacto.com</span>
+                        </a>
                     </div>
                     <div>
                         <img  class="contact-icons" src="./assets/BuildingIconsmall.png" alt="mail icon"></img>
                         <a href="https://goo.gl/maps/VoCbYdzDUvWL9Vr19" class="block">
-                        <span class="contact-text">Av. 18 de Julio 5555, Montevideo, Uruguay</span>
-                    </a>
+                            <span class="contact-text">Av. 18 de Julio 5555, Montevideo, Uruguay</span>
+                        </a>
                     </div>
                 </section>
             </section>

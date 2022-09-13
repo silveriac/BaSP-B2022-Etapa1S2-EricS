@@ -1,0 +1,312 @@
+h2{
+    width: 70%;
+    padding: 0px 25px 25px 25px;
+    color: #AACE9B;
+    font-weight: bold;
+    font-size: 16px;
+}
+h3{
+    color: black;
+    margin: 15px;
+    font-size: 25px;
+    font-weight: bolder;
+    text-align: center;
+}
+a{
+    text-decoration: none;
+}
+label{
+    padding: 15px 0px 15px 0px;
+    font-size: 16px;
+}
+.green-bubble{
+    align-self: center;
+    width: 85%;
+    opacity: 0.8;
+    margin: 0% 5% 0% 5%;
+    padding: 20px 10px 30px 10px;
+    border-radius: 20%;
+    background-color: #AACE9B;
+    color: #373867;
+    font-size: 20px;
+    text-align: center;
+    line-height: 170%;
+}
+.why-tg{
+    align-self: center;
+    padding: 10% 0 15% 0;
+    width: 90%;
+    color: white;
+}
+.why-tg h3{
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+}
+.why-tg p{
+    padding: 12px;
+    font-size: 14px;
+    line-height: 200%;
+}
+.business{
+    text-align: center;
+    font-weight: bold;
+}
+.squares-section{
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-bottom: 40px;
+}
+.green-square{
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    margin: 6px;
+    width: 150px;
+    height: 150px;
+    border-radius: 8%;
+    background-color: #AACE9B;
+}
+.green-square a{
+    color: black;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 12px;
+}
+.green-square img{
+    width: 35%;
+}
+.cover{
+    align-items: center;
+    background-color: white;
+}
+.gt-history{
+    flex-direction: column;
+    padding: 30px;
+    background-color: #D9D9D9;
+    font-size: 14px;
+    line-height: 150%;
+}
+.contact-form, .user-contact{
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.contact-form{
+    margin: 3%;
+}
+.white-cover{
+    background-color: white;
+    padding: 30px;
+}
+.title-text{
+    font-size: 25px;
+    font-weight: bold;
+    padding: 20px 0px 40px 0px;
+    opacity: 0.8;
+}
+.user-contact input{
+    height: 30px;
+    border: 3px solid #D9D9D9;
+    border-radius: 5px;
+}
+.contact-areas{
+    flex-wrap: wrap;
+    justify-content:first baseline;
+}
+.contact-areas div{
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 5px 0px 5px 0px;
+}
+.contact-areas p{
+    display: block;
+    padding: 15px 0px 15px 0px;
+    font-size: 16px;
+}
+.contact-areas label{
+    font-size: 14px;
+    padding: 0px 10px 0px 5px;
+}
+.message-field{
+    padding: 15px 0px 25px 0px;
+}
+textarea{
+    height: 70px;
+    border: 3px solid #D9D9D9;
+    border-radius: 5px;
+    font-family: 'Roboto','Sans-serif';
+}
+.send-button{
+    height: 40px;
+    border-radius: 5px;
+    border-color:#D9D9D9;
+    color: white;
+    font-weight: bolder;
+    font-size: 18px;
+    background-color:#AACE9B;
+}
+.lists-section{
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    font-size: 14px;
+}
+.list{
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.list p{
+    font-weight: bold;
+}
+.list li{
+    padding: 8px 0px 0px 0px;
+}
+.contact-info-2{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 40px 0px 30px 0px;
+}
+.contact-info-2 div{
+    flex-direction: row;
+    align-items: baseline;
+    padding: 5px 0px 5px 0px;
+}
+.contact-info-2 p{
+    font-size: 25px;
+    font-weight: bold;
+    padding: 20px;
+}
+.contact-info-2 img{
+    filter: invert();
+    height: 20px;
+    width: auto;
+}
+.contact-icons{
+    padding-right: 5px;
+}
+.contact-text{
+    font-size: 12px;
+    bottom: 14px;
+}
+
+@media screen and (min-width:480px) {
+    h2{
+        padding-top: 20px;
+        font-size: 25px;
+        width: 45%;
+    }
+    .main-img{
+        width: 80%;
+        display: block;
+        border-radius: 0% 10% 10% 0%;
+    }
+    .top-padding{
+        padding-top: 40px;
+    }
+    .overlay-1{
+        position: absolute;
+    }
+    .green-bubble{
+        position: absolute;
+    }
+    .green-bubble{
+        right: 0%;
+        bottom: 15%;
+        width: 40%;
+        height: auto;
+        opacity: 0.8;
+        margin-right: 2%;
+        padding: 10px 5px 15px 5px;
+        border-radius: 20%;
+        background-color: #AACE9B;
+        color: #373867;
+        font-size: 15px;
+        text-align: center;
+        line-height: 170%;
+    }
+    .green-square{
+        margin: 2% 4% 2% 4%;
+        width: 200px;
+        height: 200px;
+    }
+    .middle-section{
+        flex-direction: row;
+        padding: 20px;
+    }
+    .why-tg h3{
+        font-size: 35px;
+        color: #AACE9B;
+        text-align: left;
+        font-weight: bold;
+    }
+    .why-tg p{
+        font-size: 22px;
+        line-height: 140%;
+    }
+    .bubbles{
+        display: flex;
+        justify-content: space-around;
+        width: 30%;
+    }
+    .weird-bubbles{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 135px;
+        height: 100px;
+        margin: 10px;
+        border-style: solid;
+        border-width: 8px;
+        border-color: #707070;
+        border-radius: 50%;
+        background-color: #373867;
+        color: white;
+        text-align: center;
+        font-weight: bold;
+    }
+    .weird-bubbles p{
+        width: 100px;
+        font-size: 15px;
+    }
+    .green-text{
+        color: #AACE9B;
+    }
+    .squares-section{
+        background-color: white;
+        padding-top: 30px;
+    }
+    .gt-history{
+        order: 1;
+        margin: 5%;
+    }
+    .contact-info-2{
+        align-items: center;
+    }
+}
+@media screen and (min-width:768px) {
+    .green-bubble{
+        right: 0%;
+        bottom: 0%;
+        width: 30%;
+        height: auto;
+        opacity: 0.8;
+        margin-right: 2%;
+        padding: 20px 10px 30px 10px;
+        border-radius: 20%;
+        background-color: #AACE9B;
+        color: #373867;
+        font-size: 15px;
+        text-align: center;
+        line-height: 170%;
+    }
+    .green-square{
+        margin: 2% 9% 2% 9%;
+        width: 210px;
+        height: 210px;
+    }
+}
