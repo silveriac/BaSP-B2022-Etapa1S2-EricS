@@ -1,8 +1,8 @@
-console.log('Excercise 01: variables and operators')
+console.log('Excercise 01: variables and operators');
 
 // Crear dos variables numéricas y utilizar el operador suma
 // para guardar el valor de la suma de ambos números en una 3er variable.
-console.log('Excercise 1a')
+console.log('Excercise 1a');
 var num1 = 42000;
 var num2 = 6900;
 var sum = num1 + num2;
