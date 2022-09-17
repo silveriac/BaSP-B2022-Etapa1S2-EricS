@@ -5,7 +5,7 @@ console.log('Excercise 05: for');
 console.log('Excercise 5a');
 var names = ['eric', 'agus', 'javi', 'ana', 'romi'];
 for(var i = 0; i < names.length; i++){
-    console.log(names[i]);
+    alert(names[i]);
 };
 
 // Al array anterior convertir la primera letra de cada palabra en mayúscula
@@ -15,7 +15,7 @@ for(i = 0; i < names.length; i++){
     var currentNameCapital = names[i].substring(0,1);
     var currentNameRest = names[i].substring(1, tale.length);
     names[i] = currentNameCapital.toUpperCase() + currentNameRest.toLowerCase();
-    console.log('Name ' + i + ' is: ' + names[i]);
+    alert('Name ' + i + ' is: ' + names[i]);
 };
 
 // Crear una variable llamada “sentence” que tenga un string vacío, luego al array del punto a) recorrerlo con
@@ -34,6 +34,6 @@ alert(sentence);
 console.log('Excercise 5d');
 var numbers0To9 =[];
 for (k = 0; k<10; k++){
-    numbers1To10[k] = k;
+    numbers0To9[k] = k;
 };
 console.log(numbers0To9);
