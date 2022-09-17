@@ -27,17 +27,17 @@ months.pop();
 console.log('First and last months are: ' + months[0] + ' and ' + months[months.length - 1]);
 
 // Invertir el orden del array (utilizar reverse).
-console.log('Excercise 3f');
+console.log('Excercise 3e');
 months.reverse();
 console.table(months)
 
 // Unir todos los elementos del array en un único string donde cada mes este separado por un guión - (utilizar join).
-console.log('Excercise 3g');
+console.log('Excercise 3f');
 var allMonths = months.join('-');
 console.log('allMonths is: ' + allMonths)
 
 // Crear una copia del array de meses que contenga desde Mayo hasta Noviembre (utilizar slice).
-console.log('Excercise 3h');
+console.log('Excercise 3g');
 months.reverse();
 var shorterYear = months.slice(4,13);
 console.log('shorterYear:');
