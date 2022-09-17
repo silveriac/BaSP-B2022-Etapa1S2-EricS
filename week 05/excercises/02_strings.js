@@ -49,11 +49,10 @@ var lakeAnimals = 'alliGATOr hipPOPotamus';
 var initial1 = lakeAnimals.substring(0, 1);
 //substring from second letter up to space char:
 var theRest1 = lakeAnimals.substring(1, lakeAnimals.indexOf(' ') + 1);
-var animal1 = initial1.toUpperCase() + theRest1.toLowerCase(); //rest of the first word
-// substring with the first letter of second word:
+var animal1 = initial1.toUpperCase() + theRest1.toLowerCase(); //first word
 var initial2 = lakeAnimals.substring(lakeAnimals.indexOf(' ') + 1, lakeAnimals.indexOf(' ') + 2);
 // substring from the second letter of second word to the end of the string:
-var theRest2 = lakeAnimals.substring(lakeAnimals.indexOf(' ') + 2, lakeAnimals.length);
+var theRest2 = lakeAnimals.substring(lakeAnimals.indexOf(' ') + 2, lakeAnimals.length); //second word
 var animal2 = initial2.toUpperCase() + theRest2.toLowerCase();
 var lakeAnimalsCorrected = animal1 + animal2;
 console.log('lakeAnimals is: ' + lakeAnimalsCorrected);
