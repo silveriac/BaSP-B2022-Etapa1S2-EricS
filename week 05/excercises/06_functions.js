@@ -18,6 +18,7 @@ function ex6B(){
     console.log('Excercise 6b');
     function sum(value1, value2){
         if(typeof value1 != 'number' || typeof value2 != 'number'){
+            alert('At least one parameter has an error');
             return 'NaN';
         }
         else{

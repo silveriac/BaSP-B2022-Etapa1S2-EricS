@@ -42,8 +42,9 @@ function ex3F(){
 // Crear una copia del array de meses que contenga desde Mayo hasta Noviembre (utilizar slice).
 function ex3G(){
     console.log('Excercise 3g');
-    months.reverse();
-    var shorterYear = months.slice(4,13);
+    var months = ["Enero", "Febrero", "Marzo", "Abril", "Mayo",
+    "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+    var shorterYear = months.slice(months.indexOf('Mayo'), months.indexOf('Noviembre') + 1);
     console.log('shorterYear:');
     console.table(shorterYear);
 };

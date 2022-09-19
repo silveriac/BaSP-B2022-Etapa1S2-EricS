@@ -239,7 +239,7 @@ textarea{
     .green-bubble{
         position: absolute;
         right: 0%;
-        bottom: 15%;
+        bottom: 25%;
         width: 40%;
         height: auto;
         margin-right: 2%;
@@ -314,7 +314,7 @@ textarea{
 @media screen and (min-width:768px) {
     .green-bubble{
         right: 0%;
-        bottom: 0%;
+        bottom: 15%;
         width: 30%;
         padding: 20px 10px 30px 10px;
     }
@@ -336,7 +336,7 @@ textarea{
         background-color: #D9D9D9;
     }
     .green-bubble{
-        bottom: -15%;
+        bottom: 0%;
         width: 20%;
         margin-right: 0%;
         border-radius: 10% 0% 0% 10%;
@@ -393,5 +393,10 @@ textarea{
         }
     .contact-info-2{
         display: none;
+    }
+}
+@media screen and (min-width: 1360px){
+    .green-bubble{
+        bottom: -25%;
     }
 }
