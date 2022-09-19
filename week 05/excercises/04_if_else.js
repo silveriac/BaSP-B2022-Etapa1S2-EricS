@@ -21,7 +21,7 @@ function ex4A(){
 function ex4B(){
     console.log('Excercise 4b');
     var age = Math.floor(Math.random() * 101);
-    console.log('Age: ' + age + ' Age group:');
+    console.log('Age: ' + age + ' Age group in alert pop-up');
     if (age < 2){
         alert('Bebé');
     }

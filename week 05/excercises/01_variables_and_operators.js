@@ -24,6 +24,7 @@ function ex1C(){
     console.log('Excercise 1c');
     var text1 = 'blablabla';
     var text2 = 'blebleble';
+    console.log('text1 is: ' + text1 + ' and text2 is: ' + text2);
     var textsLenght = text1.length + text2.length;
     console.log('The total amount of characters is: ' + textsLenght);
 };

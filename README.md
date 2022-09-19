@@ -1,16 +1,17 @@
 # TrackGenix
 
  ## TrackGenix is an efficiency and time management app, used to track your work team on multiple projects. <br/><br/>
+[Click here to access the TrackGenix landing page](https://silveriac.github.io/BaSP-B2022-Etapa1S2-EricS/week%2004/)
 
- This is the landing page for the app <br/><br/>
  The page is responsive and has 3 different versions:<br/>
  Mobile version: up to 480 pixels wide<br/>
  Tablet version: up to 1024 pixels wide<br/>
 Desktop version: 1024 and up<br/><br/>
   ### How to use<br/>
- Open index.html (right click > open with > your browser) <br/>
+ Click the link above or open index.html *(right click > open with > your browser)* <br/>
  
  Sign up and log in to download the app. Register all your employees and projects and start tracking their productivity.<br/><br/>
+
  *Employees* <br/>
   ```
   If you're an employee, your project manager will asign you projects.
@@ -38,6 +39,6 @@ Desktop version: 1024 and up<br/><br/>
    ```
 
  
- Technnologies used: HTML, CSS, FlexBox<br/><br/>
+ Technnologies used: HTML, CSS<br/><br/>
 
 *Author: Eric Silva*
