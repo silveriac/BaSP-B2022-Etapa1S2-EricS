@@ -42,5 +42,5 @@ function ex4B(){
     }
     else if (age > 75){
         alert('Anciano');
-    }
+    };
 };

@@ -27,7 +27,7 @@ function ex6B(){
     };
     var result2 = sum('asdasd', number2);
     console.log('result2 is: ' + result2);
-}
+};
 // Aparte, crear una función validate Integer que reciba un número como parámetro
 // y devuelva verdadero si es un número entero.
 function validateInteger(value){
@@ -66,7 +66,6 @@ function ex6D(){
     };
     console.log(sum(3, 5.45));
 };
-
 // Convertir la validación del ejercicio 6d) en una función separada y llamarla dentro de la función suma
 // probando que todo siga funcionando igual.
 function ex6E(){

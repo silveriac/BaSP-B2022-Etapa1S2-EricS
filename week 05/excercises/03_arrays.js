@@ -31,13 +31,13 @@ function ex3D(){
 function ex3E(){
     console.log('Excercise 3e');
     months.reverse();
-    console.table(months)
+    console.table(months);
 };
 // Unir todos los elementos del array en un único string donde cada mes este separado por un guión - (utilizar join).
 function ex3F(){
     console.log('Excercise 3f');
     var allMonths = months.join('-');
-    console.log('allMonths is: ' + allMonths)
+    console.log('allMonths is: ' + allMonths);
 };
 // Crear una copia del array de meses que contenga desde Mayo hasta Noviembre (utilizar slice).
 function ex3G(){
