@@ -19,7 +19,7 @@ function ex6B(){
     function sum(value1, value2){
         if(typeof value1 != 'number' || typeof value2 != 'number'){
             alert('At least one parameter has an error');
-            return 'NaN';
+            return NaN;
         }
         else{
             return value1 + value2;
@@ -54,7 +54,7 @@ function ex6D(){
     function sum(value1, value2){
         if(typeof value1 != 'number' || typeof value2 != 'number'){
             alert('Error: not a number');
-            return 'NaN';
+            return NaN;
         }
         else if(Number.isInteger(value1) == false || Number.isInteger(value2) == false){
             alert('Error: Decimal number detected, the result will be rounded');
@@ -82,7 +82,7 @@ function ex6E(){
     function sum3(value1, value2){
         if(typeof value1 != 'number' || typeof value2 != 'number'){
             alert('Error: not a number');
-            return 'NaN';
+            return NaN;
         }
         else{
             return validation(value1) + validation(value2);
