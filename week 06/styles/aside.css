@@ -1,0 +1,55 @@
+@media screen and (min-width: 1024px){
+    aside{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 20%;
+        background-color: #707070;
+    }
+    aside a{
+        color: white;
+    }
+    aside p{
+        padding: 10px;
+        font-size: 18px;
+        text-align: center;
+        color: white;
+    }
+    aside input{
+        width: 80%;
+        height: 35px;
+        margin: 50px 10px 20px 20px;
+        padding: 10px;
+        border: 3px solid #D9D9D9;
+        border-radius: 5px;
+    }
+    aside li{
+        padding: 10px;
+    }
+    aside p{
+        padding-bottom: 20px;
+        color: white;
+    }
+    .nav-icons{
+        height: 24px;
+        width: auto;
+        padding: 5px 10px 0px 20px;
+    }
+    .contact-info{
+        display: flex;
+        flex-direction: column;
+        align-self: flex-end;
+        align-items: flex-start;
+        padding: 25px;
+    }
+    .contact-icons{
+        height: 22px;
+        width: auto;
+    }
+    .nav-text{
+        padding-bottom: 10px;
+    }
+    .padding-icons{
+        padding: 5px;
+    }
+}
