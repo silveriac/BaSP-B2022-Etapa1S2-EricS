@@ -18,9 +18,9 @@
         </h2>
     </header>
     <main>
-        <div class="sign-up-section">
+        <!-- <div class="sign-up-section">
             <img src="../assets/signup-clock.png" alt="">
-        </div>
+        </div> -->
         <div class="sign-up-section">
             <p>Sign up</p>
             <form action="">
@@ -32,29 +32,29 @@
                     </fieldset>
                     <fieldset class="names">
                         <input type="text" id="last-name" placeholder="Last name">
-                        <p class="error-message"></p>
-                        <p class="error-message"></p>
+                        <p id="error3" class="error-message">Last name must have at least 3 characters</p>
+                        <p id="error4" class="error-message">Last name can't have numbers</p>
                     </fieldset>
                 </div>
                 <fieldset>
                     <input type="text" id="DNI" placeholder="DNI">
-                    <p class="error-message"></p>
-                    <p class="error-message"></p>
+                    <p id="error5" class="error-message">DNI must be at least 8 numbers long</p>
+                    <p id="error6" class="error-message">DNI can only have numbers</p>
                 </fieldset>
                 <fieldset>
-                    <input type="text" id="birtday" placeholder="Birth day">
-                    <p class="error-message"></p>
-                    <p class="error-message"></p>
+                    <input type="text" id="birth-date" placeholder="Birth date">
+                    <p id="error7" class="error-message">Birth date must be in dd/mm/yy format</p>
                 </fieldset>
                 <fieldset>
                     <input type="text" id="phone-number" placeholder="Phone number">
                     <p class="error-message"></p>
-                    <p class="error-message"></p>
+                    <p  id="error9" class="error-message">Phone number must be 10 characters long</p>
+                    <p  id="error10" class="error-message">Phone number can not contain letters or special characters</p>
                 </fieldset>
                 <fieldset>
                     <input type="text" id="address" placeholder="Address">
-                    <p class="error-message"></p>
-                    <p class="error-message"></p>
+                    <p  id="error11" class="error-message">Address must be at least characters long and have multiple words</p>
+                    <p  id="error12" class="error-message">Address must include numbers</p>
                 </fieldset>
                 <fieldset>
                     <input type="text" id="email" placeholder="Email">
