@@ -53,16 +53,27 @@
                 </fieldset>
                 <fieldset>
                     <input type="text" id="address" placeholder="Address">
-                    <p  id="error11" class="error-message">Address must be at least characters long and have multiple words</p>
-                    <p  id="error12" class="error-message">Address must include numbers</p>
+                    <p  id="error11" class="error-message">Address must be at least 5 characters long and have multiple words</p>
+                    <p  id="error12" class="error-message">Address must include letters and numbers</p>
+                </fieldset>
+                <fieldset>
+                    <input type="text" id="city" placeholder="City or location">
+                    <p  id="error13" class="error-message">Location must be at least 4 characters long</p>
+                    <p  id="error14" class="error-message">Location must include letters and numbers only</p>
+                </fieldset>
+                <fieldset>
+                    <input type="text" id="postal" placeholder="Postal code">
+                    <p  id="error15" class="error-message">Postal code must be between 4 and 5 numbers long</p>
+                    <p  id="error16" class="error-message">Postal code must be all numbers</p>
                 </fieldset>
                 <fieldset>
                     <input type="text" id="email" placeholder="Email">
-                    <p class="error-message"></p>
-                    <p class="error-message"></p>
+                    <p id="error17" class="error-message">Invalid email format. Format must be example@domain.com</p>
                 </fieldset>
                 <fieldset>
                     <input type="text" id="password" placeholder="Password">
+                    <p id="error18" class="error-message">Password must be at least 8 characters long and have both letters and numbers</p>
+                    <p id="error19" class="error-message">Pass word must be only leters and numbers</p>
                 </fieldset>
                 <fieldset>
                     <input type="text" id="password2" placeholder="Repeat password">
