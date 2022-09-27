@@ -79,29 +79,20 @@ function checkName(){
     };
 };
 function checkEmail(){
-    console.log('asd');
     var check = "";
     if(email.value.length < 1){
         showError(3, email);
         check += "1";
-    console.log('asd1');
-
     };
     if(emailExpression.test(email.value) == false){
         showError(4, email);
         check += "2";
-    console.log('asd2');
-
     };
     if (check == ""){
-    console.log('asd3');
-
         return "3";
         
     }
     else{
-    console.log(check);
-
         return check;
     };
 };

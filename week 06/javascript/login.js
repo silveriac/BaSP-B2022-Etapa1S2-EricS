@@ -25,7 +25,6 @@ function submitLogIn(){
     showData += "Password: " + hidden + "\n";
     if(checkPass().indexOf("2") != -1){
         showData += document.getElementById("error19").innerHTML + "\n";
-        console.log(showData);
     };
     alert(showData);
 };

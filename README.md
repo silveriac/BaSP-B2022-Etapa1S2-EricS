@@ -1,14 +1,14 @@
 # TrackGenix
 
  ## TrackGenix is an efficiency and time management app, used to track your work team on multiple projects. <br/><br/>
-[Click here to access the TrackGenix landing page](https://silveriac.github.io/BaSP-B2022-Etapa1S2-EricS/week%2004/)
+[Click here to access the TrackGenix landing page](https://github.com/silveriac/BaSP-B2022-Etapa1S2-EricS/tree/master/week%2006)
 
  The page is responsive and has 3 different versions:<br/>
  Mobile version: up to 480 pixels wide<br/>
  Tablet version: up to 1024 pixels wide<br/>
 Desktop version: 1024 and up<br/><br/>
   ### How to use<br/>
- Click the link above or open index.html *(right click > open with > your browser)* <br/>
+ Click the link above or open views/index.html *(right click > open with > your browser)* <br/>
  
  Sign up and log in to download the app. Register all your employees and projects and start tracking their productivity.<br/><br/>
 
@@ -37,8 +37,18 @@ Desktop version: 1024 and up<br/><br/>
    You need to contact GigaTech to be a SuperAdmin.
    You can add, remove or edit Admin users.
    ```
+<br/><br/>
 
- 
- Technnologies used: HTML, CSS<br/><br/>
+
+This page has been in development for: 6 weeks.<br/>
+
+   Week 1: [User interface / Page design](https://www.figma.com/file/AebpoNNw2otpNkw50SMuYX/UI-kit-RR-(BaSPa)-2022--B?node-id=41%3A5)<br/>
+   Week 2: [HTML Structure for landing page](https://silveriac.github.io/BaSP-B2022-Etapa1S2-EricS/week%2002/index.html)<br/>
+   Week 3: [CSS Styles](https://silveriac.github.io/BaSP-B2022-Etapa1S2-EricS/week%2003/index.html)<br/>
+   Week 4: [Styles updated with Flexbox](https://silveriac.github.io/BaSP-B2022-Etapa1S2-EricS/week%2004/index.html)<br/>
+   Week 5: [Javascript excercises](https://silveriac.github.io/BaSP-B2022-Etapa1S2-EricS/week%2005/index.html)<br/>
+   Week 6: [Sign in/ Log in pages for employees](https://silveriac.github.io/BaSP-B2022-Etapa1S2-EricS/week%2006/views/index.html)<br/><br/>
+    Technnologies used: HTML, CSS, JavaScript<br/><br/>
+
 
 *Author: Eric Silva*
