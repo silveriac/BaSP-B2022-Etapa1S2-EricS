@@ -34,7 +34,8 @@ html{
     flex-direction: row;
     width: 100%;
 }
-@media screen and (min-width:1024){
-    .all-container{
-        width: 80%;
+@media screen and (min-width: 1024px){
+    .header-and-main{
+        width: 82%;
+    }
 }

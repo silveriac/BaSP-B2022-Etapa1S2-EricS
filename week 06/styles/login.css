@@ -10,7 +10,6 @@ main{
     background-color: white !important;
 }
 header{
-    display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
@@ -24,11 +23,11 @@ p{
 }
 form{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     border: 2px solid #707070;
     border-radius: 30px;
-    width: 95%;
+    width: 80%;
     padding: 0px;
     margin: 0px;
 }
@@ -38,17 +37,17 @@ input{
     border-radius: 10px;
 }
 fieldset{
-    border: 0px;
     height: 80px;
-    margin-bottom: 3px;
     width: 100%;
+    margin-bottom: 3px;
+    border: 0px;
     padding: 0px;
 }
 h2{
     color: white;
 }
 a{
-    padding-top: 20px;
+    padding: 20px;
     color: blue !important;
 }
 #submit-button{
@@ -71,15 +70,7 @@ a{
     display: flex;
     flex-direction: column;
     width: 60%;
-}
-.top-pad{
-    padding-top: 30px;
-}
-.sub-section{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    flex-wrap: wrap;
+    padding: 30px 0px 30px 0px;
 }
 .red-border{
     border: 2px solid #b60d0d;
@@ -97,7 +88,6 @@ a{
     display: flex;
     justify-content: center;
     width: 75%;
-    padding: 10px;
 }
 @media screen and (min-width:768px){
     header{
@@ -105,6 +95,9 @@ a{
     }
     header img{
         height: 32px;
+    }
+    .img-section{
+        display: flex;
     }
     form{
         flex-direction: row;
@@ -114,22 +107,6 @@ a{
         margin: 30px;
     }
     .submit-fieldset{
-        width: 40%;
-    }
-}
-@media screen and (min-width:1280px){
-    .img-section{
-        display: flex;
-    }
-    .sub-section{
-        flex-direction: row;
-        justify-content: space-between;
-        width: 100%;
-    }
-    .sub-section input{
-        width: 80%;
-    }
-    .sub-section fieldset{
         width: 40%;
     }
 }

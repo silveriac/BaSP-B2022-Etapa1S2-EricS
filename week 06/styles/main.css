@@ -137,6 +137,11 @@ form{
     border: 3px solid #D9D9D9;
     border-radius: 5px;
 }
+select{
+    height: 40px;
+    border: 3px solid #D9D9D9;
+    border-radius: 5px;
+}
 .contact-areas{
     flex-direction: column;
     flex-wrap: wrap;

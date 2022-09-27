@@ -9,10 +9,14 @@ var postal;
 var email;
 var pass;
 var passRepeat;
-var submit;
+var submitButton;
 var characters = "abcdefghijklmnñopqrstuvwxyz ABCDEFGHIJKLMNÑOPQRSTUVWXYZ0123456789";
 var emailExpression = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
 window.onload = function(){
+    submitButton = document.getElementById("submit-button");
+    submitButton.onclick = function(e){
+        e.preventDefault();
+    }
     firstName = document.getElementById("first-name");
     lastName = document.getElementById("last-name");
     DNI = document.getElementById("DNI");
@@ -24,46 +28,46 @@ window.onload = function(){
     email = document.getElementById("email");
     pass = document.getElementById("password1");
     passRepeat = document.getElementById("password2")
-    submitButton = document.getElementById("submit-button");
-    submitButton.addEventListener("click", submitCheck);
-    submitButton.onclick = function(e){
-        e.preventDefault();
-    }
-    //blur
+    submitButton.addEventListener("click", submitSignUp);
+    function blurListen(field, func){
+        field.addEventListener("blur", func);
+    };
+    function focusListen(error, field){
+        field.addEventListener("focus", function(){uncheck(error, field)})
+    };
     firstName.addEventListener("blur", function(){checkName(firstName)});
     lastName.addEventListener("blur", function(){checkName(lastName)});
-    DNI.addEventListener("blur", checkDni);
-    birthDate.addEventListener("blur", checkBirth);
-    phoneNumber.addEventListener("blur", checkPhone)
-    address.addEventListener("blur", checkAddress);
-    city.addEventListener("blur", checkLocation);
-    postal.addEventListener("blur", checkPostal);
-    email.addEventListener("blur", checkEmail);
-    pass.addEventListener("blur", checkPass);
-    passRepeat.addEventListener("blur", checkPassRepeat);
-    //focus
-    firstName.addEventListener("focus", function(){uncheck(1, firstName)});
-    lastName.addEventListener("focus", function(){uncheck(3, lastName)});
-    DNI.addEventListener("focus", function(){uncheck(5, DNI)});
-    birthDate.addEventListener("focus", function(){uncheck(7, birthDate)});
-    phoneNumber.addEventListener("focus", function(){uncheck(9, phoneNumber)});
-    address.addEventListener("focus", function(){uncheck(11, address)});
-    city.addEventListener("focus", function(){uncheck(13, city)});
-    postal.addEventListener("focus", function(){uncheck(15, postal)});
-    email.addEventListener("focus", function(){uncheck(17, email)});
-    pass.addEventListener("focus", function(){uncheck(18, pass)});
-    passRepeat.addEventListener("focus", function(){uncheck(20, passRepeat)});
+    blurListen(DNI, checkDni);
+    blurListen(birthDate, checkBirth);
+    blurListen(phoneNumber, checkPhone);
+    blurListen(address, checkAddress);
+    blurListen(city, checkLocation);
+    blurListen(postal, checkPostal);
+    blurListen(email, checkEmail);
+    blurListen(pass, checkPass);
+    blurListen(passRepeat, checkPassRepeat);
+    focusListen(1, firstName);
+    focusListen(3, lastName);
+    focusListen(5, DNI);
+    focusListen(7, birthDate);
+    focusListen(9, phoneNumber);
+    focusListen(11, address);
+    focusListen(13, city);
+    focusListen(15, postal);
+    focusListen(17, email);
+    focusListen(18, pass);
+    focusListen(20, passRepeat);
 };
 function uncheck(number, field){
     console.log("uncheck");
     var firstError = document.getElementById("error" + number);
     var SecondError = document.getElementById("error" + (number+1));
-    field.classList.remove("red-border");
+    field.classList.remove("red-border");    
     firstError.classList.remove("show-text");
-    try{
-        SecondError.classList.remove("show-text");
-    }
-    catch{};
+    if(number != 7 && number != 17 && number != 20){ //the corresponding fields have only one possible error
+        try{SecondError.classList.remove("show-text");}
+        catch{console.log("Login page fields only have one error");};
+    };
 };
 function showError(number, field){
     var error = document.getElementById("error" + number);
@@ -228,7 +232,8 @@ function checkEmail(){
 function checkPass(){
     var check = "";
     if(pass.value.length < 8){
-        showError(18, pass);
+        try{showError(18, pass);}
+        catch{};
         check += "1";
     };
     var temp = 0;
@@ -238,9 +243,8 @@ function checkPass(){
         }
         else if(isNum(pass.value[i]) == false){
             temp++;
-            console.log(temp);
             if(temp == pass.value.length){
-                showError(18, pass);
+                showError(19, pass);
                 check += "2";
                 break;
             };
@@ -266,7 +270,7 @@ function checkPassRepeat(){
         return false;
     };
 };
-function submitCheck(){
+function submitSignUp(){
     var showData = "";
     function addData(number, func, data){
         if(func(data).indexOf("1") != -1){
@@ -274,9 +278,7 @@ function submitCheck(){
         };
         if(func(data).indexOf("2") != -1){
             showData += document.getElementById("error" + (number + 1)).innerHTML + "\n";
-            console.log(showData);
         };
-        console.log(func(data));
     };
     showData += "Name: " + firstName.value + "\n";
     addData(1, checkName, firstName);
@@ -284,7 +286,10 @@ function submitCheck(){
     addData(3, checkName, lastName);
     showData += "DNI: " + DNI.value + "\n";
     addData(5, checkDni, null);
-    showData += "Birth date: " + birthDate.value + "\n";
+    var birthDatecorrected = "";
+    birthDatecorrected +=
+    birthDate.value.substring(8) + "/" + birthDate.value.substring(5,7) + "/"  + birthDate.value.substring(0,4);
+    showData += "Birth date: " + birthDatecorrected + "\n";
     if(checkBirth() == false){
         showData += document.getElementById("error7").innerHTML + "\n";
     };
@@ -296,7 +301,7 @@ function submitCheck(){
     addData(13, checkLocation);
     showData += "Postal code: " + postal.value + "\n";
     addData(15, checkPostal);
-    showData += "Email: " + birthDate.value + "\n";
+    showData += "Email: " + email.value + "\n";
     if(checkEmail() == false){
         showData += document.getElementById("error17").innerHTML + "\n";
     };
@@ -311,4 +316,5 @@ function submitCheck(){
         showData += document.getElementById("error20").innerHTML + "\n";
     };
     alert(showData);
+    console.log(birthDatecorrected);
 };
