@@ -59,14 +59,13 @@ window.onload = function(){
     focusListen(20, passRepeat);
 };
 function uncheck(number, field){
-    console.log("uncheck");
     var firstError = document.getElementById("error" + number);
     var SecondError = document.getElementById("error" + (number+1));
     field.classList.remove("red-border");    
     firstError.classList.remove("show-text");
     if(number != 7 && number != 17 && number != 20){ //the corresponding fields have only one possible error
         try{SecondError.classList.remove("show-text");}
-        catch{console.log("Login page fields only have one error");};
+        catch{};//Login page fields only have one error"
     };
 };
 function showError(number, field){
@@ -227,7 +226,7 @@ function checkEmail(){
     if (emailExpression.test(email.value) == false){
         showError(17, email);
         return false;
-    }
+    };
 };
 function checkPass(){
     var check = "";
@@ -316,5 +315,4 @@ function submitSignUp(){
         showData += document.getElementById("error20").innerHTML + "\n";
     };
     alert(showData);
-    console.log(birthDatecorrected);
 };

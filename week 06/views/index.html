@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="../styles/main.css">
         <link rel="stylesheet" href="../styles/aside.css">
         <link rel="stylesheet" href="../styles/footer.css">
+        <script src="../javascript/contact.js"></script>
         <title>Trackgenix</title>
     </head>
     <body>
@@ -199,36 +200,42 @@
                                     <label>
                                         Name
                                     </label>
-                                    <input type="text" placeholder="Enter your name">
+                                    <input type="text" id="user-name" placeholder="Enter your name">
+                                    <p id="error1" class="error-message">Name must have at least 3 characters</p>
+                                    <p id="error2" class="error-message">Name can only have letters</p>
                                 </fieldset>
                                 <fieldset>
                                     <label>
                                         E-mail
                                     </label>
-                                    <input type="email" placeholder="Enter your email">
+                                    <input type="email" id="email" placeholder="Enter your email">
+                                    <p id="error3" class="error-message">Email is required</p>
+                                    <p id="error4" class="error-message">Email not valid</p>
                                 </fieldset>
                             </section>
                             <fieldset class="contact-areas">
                                 <p>
                                     Contact Area
                                 </p>
-                                <div>
-                                    <select name="Select a contact area" id="">
-                                        <option value="HR">Human Resources</option>
-                                        <option value="Systems">Systems</option>
-                                        <option value="Marketing">Marketing</option>
-                                    </select>
-                                </div>
+                                <select name="Select a contact area" id="contact-area">
+                                    <option value="none" selected disabled hidden>- Select a contact area -</option>
+                                    <option value="HR">Human Resources</option>
+                                    <option value="Systems">Systems</option>
+                                    <option value="Marketing">Marketing</option>
+                                </select>
                             </fieldset>
+                            <p id="error7" class="error-message">Select a contact area</p>
                             <fieldset class="message-field">
                                 <label>
                                     Message
                                 </label>
-                                <textarea class="message" placeholder="Enter your message"></textarea>
+                                <textarea class="message" id="message" placeholder="Enter your message"></textarea>
                             </fieldset>
-                            <fieldset>
-                                <input type="submit" class="send-button" value="Send"></input>
+                            <p id="error8" class="error-message">Your message is too short</p>
+                            <fieldset class="send-button">
+                                <input type="submit" id="submit" value="Send"></input>
                             </fieldset>
+
                         </form>
                     </section>
                     <section class="white-cover">

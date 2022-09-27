@@ -34,6 +34,18 @@ html{
     flex-direction: row;
     width: 100%;
 }
+.red-border{
+    border: 2px solid #b60d0d !important;
+}
+.error-message{
+    visibility: hidden;
+    margin: 3px;
+    color: #b60d0d;
+    font-size: 10px !important;
+}
+.show-text{
+    visibility: visible;
+}
 @media screen and (min-width: 1024px){
     .header-and-main{
         width: 82%;

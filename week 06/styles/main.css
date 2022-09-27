@@ -31,6 +31,7 @@ main{
 fieldset{
     flex-direction: column;
     flex-wrap: wrap;
+    height: 130px;
 }
 form{
     padding: 20px 0px 20px 0px;
@@ -172,6 +173,9 @@ textarea{
     font-family: 'Roboto','Sans-serif';
 }
 .send-button{
+    padding-top: 25px;
+}
+.send-button input{
     height: 40px;
     border-radius: 5px;
     border-color:#D9D9D9;
