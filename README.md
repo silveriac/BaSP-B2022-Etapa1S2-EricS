@@ -1,7 +1,7 @@
 # TrackGenix
 
  ## TrackGenix is an efficiency and time management app, used to track your work team on multiple projects. <br/><br/>
-[Click here to access the TrackGenix landing page](https://github.com/silveriac/BaSP-B2022-Etapa1S2-EricS/tree/master/week%2006)
+[Click here to access the TrackGenix landing page](https://silveriac.github.io/BaSP-B2022-Etapa1S2-EricS/week%2006/views/index.html)
 
  The page is responsive and has 3 different versions:<br/>
  Mobile version: up to 480 pixels wide<br/>
