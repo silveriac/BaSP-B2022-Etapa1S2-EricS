@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap');
+
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: #373867;
+    margin: 0;
+}
+section, div,  article, form, fieldset, footer{
+    display: flex;
+}
+a:link, a:visited{
+    text-decoration: none;
+}
+main a:link, main a:visited{
+    color: black;
+}
+a:hover{
+    text-decoration: underline;
+}
+.header-and-main{
+    display: flex;
+    flex-direction: column;
+}
+aside, .main-img, .bubbles, .social-media{
+    display: none;
+}
+html{
+    scroll-behavior: smooth;
+    font-family: 'Roboto', 'Sans-serif';
+}
+.all-container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.red-border{
+    border: 2px solid #b60d0d !important;
+}
+.error-message{
+    visibility: hidden;
+    margin: 3px;
+    color: #b60d0d;
+    font-size: 10px !important;
+}
+.show-text{
+    visibility: visible;
+}
+@media screen and (min-width: 1024px){
+    .header-and-main{
+        width: 82%;
+    }
+}

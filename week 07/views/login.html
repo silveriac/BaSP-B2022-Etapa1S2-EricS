@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/login.css">
+    <script src="../javascript/employee-signup.js" ></script>
+    <script src="../javascript/login.js" ></script>
+    <title>Log in at TrackGenix</title>
+</head>
+<body>
+    <header>
+        <h2>
+            TrackGenix
+        </h2>
+        <a href="./index.html">
+            <img src="../assets/HomeIcon.png" alt="Home">
+        </a>
+    </header>
+    <main>
+        <div>
+            <p>Log in</p>
+        </div>
+        <form>
+            <div class="img-section">
+                <img src="../assets/log-in-calendar.png" alt="">
+            </div>
+            <div class="form-section">
+                <fieldset>
+                    <input type="text" id="email" placeholder="Email">
+                    <p id="error17" class="error-message">Email not valid</p>
+                </fieldset>
+                <fieldset>
+                    <input type="password" id="password1" placeholder="Password">
+                    <p id="error19" class="error-message">Wrong password: must contain letters and numbers exclusively</p>
+                </fieldset>
+                <input id="submit-button" type="submit" value="Log in">
+            </div>
+        </form>
+        <a href="./signup.html">Don't have an account? Sign in!</a>
+    </main>
+</body>
+</html>
