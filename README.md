@@ -14,8 +14,7 @@ Desktop version: 1024 and up<br/><br/>
 
  *Employees* <br/>
   ```
-  If you're an employee, your project manager will asign you projects.
- Once you open your account, you can add the amount of hours you've worked and the corresponding date.
+  Click on "Sign up" to create an account, once you have created ann account,  your project manager will asign you projects. You can add the amount of hours you've worked and the corresponding date and project.
  ```
 
  *Project Managers*  <br/>
@@ -47,7 +46,8 @@ This page has been in development for: 6 weeks.<br/>
    Week 3: [CSS Styles](https://silveriac.github.io/BaSP-B2022-Etapa1S2-EricS/week%2003/index.html)<br/>
    Week 4: [Styles updated with Flexbox](https://silveriac.github.io/BaSP-B2022-Etapa1S2-EricS/week%2004/index.html)<br/>
    Week 5: [Javascript excercises](https://silveriac.github.io/BaSP-B2022-Etapa1S2-EricS/week%2005/index.html)<br/>
-   Week 6: [Sign in/ Log in pages for employees](https://silveriac.github.io/BaSP-B2022-Etapa1S2-EricS/week%2006/views/index.html)<br/><br/>
+   Week 6: [Sign in/ Log in pages for employees](https://silveriac.github.io/BaSP-B2022-Etapa1S2-EricS/week%2006/views/index.html)<br/>
+   Week 7: [API requests to log in and sign up as a new user](https://silveriac.github.io/BaSP-B2022-Etapa1S2-EricS/week%2006/views/index.html)<br/><br/>
     Technnologies used: HTML, CSS, JavaScript<br/><br/>
 
 
