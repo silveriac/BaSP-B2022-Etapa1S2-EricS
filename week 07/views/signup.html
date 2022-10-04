@@ -12,7 +12,6 @@
     <title>Sign up at TrackGenix</title>
 </head>
 <body>
-
     <main>
         <header>
             <h2>
@@ -86,13 +85,13 @@
                 <fieldset>
                     <input type="password" id="password2" placeholder="Repeat password">
                     <p id="error20" class="error-message">Passwords do not match</p>
-                    <p class="error-message"></p>
                 </fieldset>
             </div>
         </form>
         <a href="./login.html">Aldready have an account? Log in!</a>
         <fieldset class="submit-fieldset">
             <input id="submit-button" type="submit" form="signup-form" value="Create">
+            <p id="required">All fields are required</p>
         </fieldset>
         <div class="modal">
             <div class="modal-alert">
@@ -132,19 +131,11 @@
         <div class="modal">
             <div class="modal-alert">
                 <p id="message"></p>
-                <div id="error-message">
+                <div id="error-div">
                 </div>
                 <button class="ok">Ok</button>
             </div>
         </div>
-        <!-- <div class="modal">
-            <div class="modal-alert">
-                <p>Employee created</p>
-                <a href="./login.html">
-                    <button>Log in</button>
-                </a>
-            </div>
-        </div> -->
     </main>
 </body>
 </html>

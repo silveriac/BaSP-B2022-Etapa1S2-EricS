@@ -13,15 +13,15 @@
     <title>Log in at TrackGenix</title>
 </head>
 <body>
-    <header>
-        <h2>
-            TrackGenix
-        </h2>
-        <a href="./index.html">
-            <img src="../assets/HomeIcon.png" alt="Home">
-        </a>
-    </header>
     <main>
+        <header>
+            <h2>
+                TrackGenix
+            </h2>
+            <a href="./index.html">
+                <img src="../assets/HomeIcon.png" alt="Home">
+            </a>
+        </header>
         <div>
             <p>Log in</p>
         </div>
@@ -36,12 +36,22 @@
                 </fieldset>
                 <fieldset>
                     <input type="password" id="password1" placeholder="Password">
+                    <p id="error18" class="error-message">Wrong password: must be at least 8 characters long. </p>
                     <p id="error19" class="error-message">Wrong password: must contain letters and numbers exclusively</p>
                 </fieldset>
                 <input id="submit-button" type="submit" value="Log in">
+                <p id="required">All fields are required</p>
             </div>
         </form>
         <a href="./signup.html">Don't have an account? Sign in!</a>
+        <div class="modal">
+            <div class="modal-alert">
+                <p id="message"></p>
+                <div id="error-div">
+                </div>
+                <button class="ok">Ok</button>
+            </div>
+        </div>
     </main>
 </body>
 </html>

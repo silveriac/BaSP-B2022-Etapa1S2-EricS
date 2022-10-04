@@ -9,10 +9,12 @@ var postal;
 var email;
 var pass;
 var passRepeat;
+var fields = [];
 var submitButton;
 var urlSignUp;
 var characters = "abcdefghijklmnñopqrstuvwxyz ABCDEFGHIJKLMNÑOPQRSTUVWXYZ0123456789";
 var modal;
+var message;
 var errorsDiv;
 var okButton;
 var errorAlerts;
@@ -35,7 +37,8 @@ window.onload = function(){
     pass = document.getElementById("password1");
     passRepeat = document.getElementById("password2");
     modal = document.getElementsByClassName("modal");
-    errorsDiv = document.getElementById("error-message");
+    message = document.getElementById("message");
+    errorsDiv = document.getElementById("error-div");
     okButton = document.getElementsByClassName("ok");
     function blurListen(field, func){
         field.addEventListener("blur", func);
@@ -116,6 +119,12 @@ function isAlphaNum(letter){
     };
     return false;
 };
+// function isEmpty(field){
+//     if(field.value.length){
+//         return true;
+//     };
+//     field.classList.add("red-border");
+// };
 function checkName(name){
     var num;
     var check = [];
@@ -292,8 +301,27 @@ function checkPassRepeat(){
         return false;
     };
 };
+function createPTag(addClass, content){
+    var text = document.createElement("p");
+    text.appendChild(document.createTextNode(content));
+    text.classList.add(addClass);
+    errorsDiv.appendChild(text);
+};
 function submitSignUp(){
-    // var showData = "";
+    fields = [firstName, lastName, DNI, birthDate, phoneNumber, address, city, postal, email, pass, passRepeat];
+    for(var i=0; i < fields.length; i++){ //don't open modal if there's any emprty field
+        var required =document.getElementById("required");
+        if(fields[i].value.length){
+            required.classList.remove("show");
+            fields[i].classList.remove("red-border");
+        }
+        else{
+            required.classList.add("show");
+            console.log("asdasd")
+            fields[i].classList.add("red-border");
+            return false;
+        };
+    };
     var errors = 0;
     urlSignUp = "https://basp-m2022-api-rest-server.herokuapp.com/signup?"
     errorAlerts = document.getElementsByClassName("error-alert");
@@ -314,7 +342,7 @@ function submitSignUp(){
             userData[number].innerHTML += data.value;
         }
         else{
-            userData[number].innerHTML += data;
+            userData[number].innerHTML += data; //some of these are already sent as a strin arguments
         };        
     };
     addData(0, "Name:  ", firstName);
@@ -373,7 +401,7 @@ function request(url){
         return response.json();
     })
     .then(function(response){
-        var message = document.getElementById("message");
+        message = document.getElementById("message");
         modal[1].classList.add("show");
         if(response.success == true){
             message.innerHTML = response.msg
@@ -390,13 +418,9 @@ function request(url){
             localStorage.setItem('Password', response.data.password);
         }
         else{
-            // for(var i=0; i < response.errors.length; i++){
-            //     console.log(response.errors);
-            //     var text = document.createElement("p");
-            //     text.appendChild(document.createTextNode(response.errors[i].msg));
-            //     console.log(errorsDiv);
-            //     errorsDiv.appendChild(text);
-            // };
+            for(var i=0; i<response.errors.length; i++){
+                createPTag("error-alert", ("Error: " + response.errors[i].msg));
+            };
             throw new Error("Could not create user");
         };
     })
@@ -404,14 +428,18 @@ function request(url){
         message.innerHTML = error;
     });
 };
-function closeModal(n){
+function closeModal(){
     modal[0].classList.remove("show");
-    modal[1].classList.remove("show");
+    try{modal[1].classList.remove("show");}
+    catch{};
     for(var i=0; i < userData.length; i++){
         userData[i].innerHTML = "";
         errorAlerts[i].innerHTML = "";
     }
-    while(errorsDiv.childNodes[1]){
+    message.innerHTML = "";
+    while(errorsDiv.firstChild){
         errorsDiv.removeChild(errorsDiv.lastChild);
+        i++;
     };
+    errorsDiv.classList.remove("show");
 };
