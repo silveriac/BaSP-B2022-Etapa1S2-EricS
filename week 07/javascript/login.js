@@ -29,7 +29,6 @@ function submitLogIn(){
         }
         else{
             required.classList.add("show");
-            console.log("asdasd")
             fields[i].classList.add("red-border");
             return false;
         };
