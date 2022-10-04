@@ -10,13 +10,19 @@ var email;
 var pass;
 var passRepeat;
 var submitButton;
+var urlSignUp;
 var characters = "abcdefghijklmnñopqrstuvwxyz ABCDEFGHIJKLMNÑOPQRSTUVWXYZ0123456789";
+var modal;
+var errorsDiv;
+var okButton;
+var errorAlerts;
+var userData;
 var emailExpression = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
 window.onload = function(){
     submitButton = document.getElementById("submit-button");
     submitButton.onclick = function(e){
         e.preventDefault();
-    }
+    };
     firstName = document.getElementById("first-name");
     lastName = document.getElementById("last-name");
     DNI = document.getElementById("DNI");
@@ -27,14 +33,20 @@ window.onload = function(){
     postal = document.getElementById("postal");
     email = document.getElementById("email");
     pass = document.getElementById("password1");
-    passRepeat = document.getElementById("password2")
-    submitButton.addEventListener("click", submitSignUp);
+    passRepeat = document.getElementById("password2");
+    modal = document.getElementsByClassName("modal");
+    errorsDiv = document.getElementById("error-message");
+    okButton = document.getElementsByClassName("ok");
     function blurListen(field, func){
         field.addEventListener("blur", func);
     };
     function focusListen(error, field){
         field.addEventListener("focus", function(){uncheck(error, field)})
     };
+    submitButton.addEventListener("click", submitSignUp);       
+    okButton[0].addEventListener("click", function(){closeModal(0)});
+    okButton[1].addEventListener("click", function(){request(urlSignUp)});
+    okButton[2].addEventListener("click", function(){closeModal(0)});
     firstName.addEventListener("blur", function(){checkName(firstName)});
     lastName.addEventListener("blur", function(){checkName(lastName)});
     blurListen(DNI, checkDni);
@@ -57,18 +69,6 @@ window.onload = function(){
     focusListen(17, email);
     focusListen(18, pass);
     focusListen(20, passRepeat);
-
-    //default values for testing
-    /*firstName.value = "Eric";
-    lastName.value = "Silva";
-    DNI.value = "51924045";
-    phoneNumber.value = "0091745735";
-    address.value = "Calle 3";
-    city.value = "Parque del Plata 44";
-    postal.value = "16100";
-    email.value = "rose@radiumrocket.com";
-    pass.value = "BaSP2022";
-    passRepeat.value = "BaSP2022";*/
     firstName.value = localStorage.getItem('Name');
     lastName.value = localStorage.getItem('Last Name');
     DNI.value = localStorage.getItem('DNI');
@@ -79,20 +79,21 @@ window.onload = function(){
     postal.value = localStorage.getItem('Zip code');
     email.value = localStorage.getItem('Email');
     pass.value = localStorage.getItem('Password');
+    passRepeat.value = localStorage.getItem('Password');
 };
 function uncheck(number, field){
     var firstError = document.getElementById("error" + number);
     var SecondError = document.getElementById("error" + (number+1));
     field.classList.remove("red-border");    
-    firstError.classList.remove("show-text");
+    firstError.classList.remove("show");
     if(number != 7 && number != 17 && number != 20){ //the corresponding fields have only one possible error
-        try{SecondError.classList.remove("show-text");}
+        try{SecondError.classList.remove("show");}
         catch{};//Login page fields only have one error"
     };
 };
 function showError(number, field){
     var error = document.getElementById("error" + number);
-    error.classList.add("show-text");
+    error.classList.add("show");
     field.classList.add("red-border");
 };
 function isNum(char){
@@ -292,82 +293,125 @@ function checkPassRepeat(){
     };
 };
 function submitSignUp(){
-    var showData = "";
-    var urlSignUp = "https://basp-m2022-api-rest-server.herokuapp.com/signup?"
+    // var showData = "";
     var errors = 0;
-    function addData(number, func, data){
+    urlSignUp = "https://basp-m2022-api-rest-server.herokuapp.com/signup?"
+    errorAlerts = document.getElementsByClassName("error-alert");
+    userData = document.getElementsByClassName("data");
+    function addErrors(number, error, func, data){
         if(func(data).indexOf("1") != -1){
-            showData += "Error: " + document.getElementById("error" + number).innerHTML + "\n";
+            errorAlerts[number].innerHTML += document.getElementById("error" + error).innerHTML;
             errors += 1;
         };
         if(func(data).indexOf("2") != -1){
-            showData += "Error: " + document.getElementById("error" + (number + 1)).innerHTML + "\n";
+            errorAlerts[number].innerHTML += document.getElementById("error" + (error + 1)).innerHTML;
             errors += 1;
         };
     };
-    showData += "Name: " + firstName.value + "\n";
-    addData(1, checkName, firstName);
-    showData += "Last name: " + lastName.value + "\n";
-    addData(3, checkName, lastName);
-    showData += "DNI: " + DNI.value + "\n";
-    addData(5, checkDni, null);
+    function addData(number, text, data){
+        userData[number].innerHTML += text;
+        if(data.value){
+            userData[number].innerHTML += data.value;
+        }
+        else{
+            userData[number].innerHTML += data;
+        };        
+    };
+    addData(0, "Name:  ", firstName);
+    addData(1, "Last name:  ", lastName);
+    addData(2,  "DNI:  ", DNI);
     var birthDatecorrected = "";
     birthDatecorrected +=
-    birthDate.value.substring(8) + "/" + birthDate.value.substring(5,7) + "/"  + birthDate.value.substring(0,4);
-    showData += "Birth date: " + birthDatecorrected + "\n";
-    if(checkBirth() == false){
-        showData +=  "Error: " + document.getElementById("error7").innerHTML + "\n";
-        errors += 1;
-    };
-    showData += "Phone number: " + phoneNumber.value + "\n";
-    addData(9, checkPhone);
-    showData += "Address: " + address.value + "\n";
-    addData(11, checkAddress);
-    showData += "Location: " + city.value + "\n";
-    addData(13, checkLocation);
-    showData += "Postal code: " + postal.value + "\n";
-    addData(15, checkPostal);
-    showData += "Email: " + email.value + "\n";
-    if(checkEmail() == false){
-        showData +=  "Error: " + document.getElementById("error17").innerHTML + "\n";
-        errors += 1;
-    };
+    birthDate.value.substring(5, 7) + "/"  + birthDate.value.substring(8) + "/" + birthDate.value.substring(0,4);
+    addData(3, "Birth date:  ",birthDatecorrected)
+    addData(4, "Phone Number:  ", phoneNumber);
+    addData(5, "Address:  ", address);
+    addData(6, "Location:  ", city);
+    addData(7, "Postal code:  ", postal);
+    addData(8, "Email:  ", email);
     var hidden = "";
     for(var i = 0; i < pass.value.length; i++){
         hidden += "*";
     };
-    showData += "Password: " + hidden + "\n";
-    addData(18, checkPass);
-    showData += "Repeated password: " + hidden + "\n";
-    if(checkPass() == false){
-        showData +=  "Error: " + document.getElementById("error20").innerHTML + "\n";
+    addData(9, "Password:  ", hidden)
+    addErrors(0, 1, checkName, firstName);
+    addErrors(1, 3, checkName, lastName);
+    addErrors(2, 5, checkDni);
+    if(checkBirth() == false){
+        errorAlerts[3] += document.getElementById("error7").innerHTML;
         errors += 1;
     };
+    addErrors(4, 9, checkPhone);
+    addErrors(5, 11, checkAddress);
+    addErrors(6, 13, checkLocation);
+    addErrors(7, 15, checkPostal);
+    if(checkEmail() == false){
+        errorAlerts[8] += document.getElementById("error17").innerHTML;
+        errors += 1;
+    };
+    addErrors(9, 18, checkPass);
+    if(checkPassRepeat() == false){
+        errorAlerts[9] += document.getElementById("error20").innerHTML;
+        errors += 1;
+    };
+    modal[0].classList.add("show");
     if(errors == 0){
         urlSignUp +=  "name=" + firstName.value + "&lastName=" + lastName.value + "&dni=" + DNI.value + "&dob="
         + birthDatecorrected + "&phone=" + phoneNumber.value + "&address=" + address.value + "&city=" + city.value + "&zip="
         + postal.value + "&email=" +  email.value + "&password=" + pass.value;
-        // alert(showData); //replace this with modal
-        fetch(urlSignUp)
-        .then(function(response){
-            return response.json();
-        })
-        .then(function(response){
-            console.log(response.data.name);
-            alert(response.msg); 
+        okButton[0].innerHTML = "Back";
+        okButton[1].classList.remove("none");
+    }
+    else{
+        okButton[0].innerHTML = "Correct errors";
+        okButton[1].classList.add("none");
+    };
+};
+function request(url){
+    fetch(url)
+    .then(function(response){
+        return response.json();
+    })
+    .then(function(response){
+        var message = document.getElementById("message");
+        modal[1].classList.add("show");
+        if(response.success == true){
+            message.innerHTML = response.msg
             localStorage.setItem('Name', response.data.name);
             localStorage.setItem('Last Name', response.data.lastName);
             localStorage.setItem('DNI', response.data.dni);
-            localStorage.setItem('Date of Birth', response.data.dob); //correct this to be default formmat yyyy/mm/dd
+            localStorage.setItem('Date of Birth',
+            response.data.dob.substring(6) +"-"+ response.data.dob.substring(0,2) +"-"+ response.data.dob.substring(3,5));
             localStorage.setItem('Phone Number', response.data.phone);
             localStorage.setItem('Address', response.data.address);
             localStorage.setItem('City', response.data.city);
-            localStorage.setItem('Zip code', response.data.city);
+            localStorage.setItem('Zip code', response.data.zip);
             localStorage.setItem('Email', response.data.email);
             localStorage.setItem('Password', response.data.password);
-        });
-        /*.catch(function(response){
-            console.log(response);
-        });*/
+        }
+        else{
+            // for(var i=0; i < response.errors.length; i++){
+            //     console.log(response.errors);
+            //     var text = document.createElement("p");
+            //     text.appendChild(document.createTextNode(response.errors[i].msg));
+            //     console.log(errorsDiv);
+            //     errorsDiv.appendChild(text);
+            // };
+            throw new Error("Could not create user");
+        };
+    })
+    .catch(function(error){
+        message.innerHTML = error;
+    });
+};
+function closeModal(n){
+    modal[0].classList.remove("show");
+    modal[1].classList.remove("show");
+    for(var i=0; i < userData.length; i++){
+        userData[i].innerHTML = "";
+        errorAlerts[i].innerHTML = "";
+    }
+    while(errorsDiv.childNodes[1]){
+        errorsDiv.removeChild(errorsDiv.lastChild);
     };
 };

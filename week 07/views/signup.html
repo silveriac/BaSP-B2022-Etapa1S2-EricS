@@ -12,15 +12,16 @@
     <title>Sign up at TrackGenix</title>
 </head>
 <body>
-    <header>
-        <h2>
-            TrackGenix
-        </h2>
-        <a href="./index.html">
-            <img src="../assets/HomeIcon.png" alt="Home">
-        </a>
-    </header>
+
     <main>
+        <header>
+            <h2>
+                TrackGenix
+            </h2>
+            <a href="./index.html">
+                <img src="../assets/HomeIcon.png" alt="Home">
+            </a>
+        </header>
         <div>
             <p>Sign up</p>
         </div>
@@ -32,55 +33,55 @@
                 <div class="sub-section top-pad">
                     <fieldset>
                         <input type="text" id="first-name" placeholder="Name">
-                        <p id="error1" class="error-message">Name must have at least 3 characters</p>
-                        <p id="error2" class="error-message">Name can't have numbers</p>
+                        <p id="error1" class="error-message">Name must have at least 3 characters. </p>
+                        <p id="error2" class="error-message">Name can't have numbers. </p>
                     </fieldset>
                     <fieldset>
                         <input type="text" id="last-name" placeholder="Last name">
-                        <p id="error3" class="error-message">Last name must have at least 3 characters</p>
-                        <p id="error4" class="error-message">Last name can't have numbers</p>
+                        <p id="error3" class="error-message">Last name must have at least 3 characters. </p>
+                        <p id="error4" class="error-message">Last name can't have numbers. </p>
                     </fieldset>
                 </div>
                 <fieldset>
                     <input type="text" id="DNI" placeholder="DNI">
-                    <p id="error5" class="error-message">DNI must be at least 8 numbers long</p>
-                    <p id="error6" class="error-message">DNI can only have numbers</p>
+                    <p id="error5" class="error-message">DNI must be at least 8 numbers long. </p>
+                    <p id="error6" class="error-message">DNI can only have numbers. </p>
                 </fieldset>
                 <fieldset>
                     <input type="date" id="birth-date" max="2010-01-01" value="2000-01-01" placeholder="Birth date">
-                    <p id="error7" class="error-message">Enter a valid date</p>
+                    <p id="error7" class="error-message">Enter a valid date. </p>
                 </fieldset>
                 <fieldset>
                     <input type="text" id="phone-number" placeholder="Phone number">
                     <p class="error-message"></p>
-                    <p id="error9" class="error-message">Phone number must be 10 characters long</p>
-                    <p id="error10" class="error-message">Phone number can not contain letters or special characters</p>
+                    <p id="error9" class="error-message">Phone number must be 10 characters long. </p>
+                    <p id="error10" class="error-message">Phone number can not contain letters or special characters. </p>
                 </fieldset>
                 <fieldset>
                     <input type="text" id="address" placeholder="Address">
-                    <p id="error11" class="error-message">Address must be at least 5 characters long and have multiple words</p>
-                    <p id="error12" class="error-message">Address must include letters and numbers</p>
+                    <p id="error11" class="error-message">Address must be at least 5 characters long and have multiple words. </p>
+                    <p id="error12" class="error-message">Address must include letters and numbers. </p>
                 </fieldset>
             </div>
             <div class="form-section">
                 <fieldset>
                     <input type="text" id="city" placeholder="City or location">
-                    <p id="error13" class="error-message">Location must be at least 4 characters long</p>
-                    <p id="error14" class="error-message">Location must include letters and numbers only</p>
+                    <p id="error13" class="error-message">Location must be at least 4 characters long. </p>
+                    <p id="error14" class="error-message">Location must include letters and numbers only. </p>
                 </fieldset>
                 <fieldset>
                     <input type="text" id="postal" placeholder="Postal code">
-                    <p id="error15" class="error-message">Postal code must be between 4 and 5 numbers long</p>
-                    <p id="error16" class="error-message">Postal code must be all numbers</p>
+                    <p id="error15" class="error-message">Postal code must be between 4 and 5 numbers long. </p>
+                    <p id="error16" class="error-message">Postal code must be all numbers. </p>
                 </fieldset>
                 <fieldset>
                     <input type="text" id="email" placeholder="Email">
-                    <p id="error17" class="error-message">Invalid email format. Format must be example@domain.com</p>
+                    <p id="error17" class="error-message">Invalid email format. Format must be example@domain.com. </p>
                 </fieldset>
                 <fieldset>
                     <input type="password" id="password1" placeholder="Password">
-                    <p id="error18" class="error-message">Password must be at least 8 characters long</p>
-                    <p id="error19" class="error-message">Password must be formed by letters and numbers</p>
+                    <p id="error18" class="error-message">Password must be at least 8 characters long. </p>
+                    <p id="error19" class="error-message">Password must be formed by letters and numbers. </p>
                 </fieldset>
                 <fieldset>
                     <input type="password" id="password2" placeholder="Repeat password">
@@ -93,6 +94,57 @@
         <fieldset class="submit-fieldset">
             <input id="submit-button" type="submit" form="signup-form" value="Create">
         </fieldset>
+        <div class="modal">
+            <div class="modal-alert">
+                <p>Confirm your data</p>
+                <div class="user-info">
+                    <div>
+                        <p class="data"></p>
+                        <p class="error-alert"></p>
+                        <p class="data"></p>
+                        <p class="error-alert"></p>
+                        <p class="data"></p>
+                        <p class="error-alert"></p>
+                        <p class="data"></p>
+                        <p class="error-alert"></p>
+                        <p class="data"></p>
+                        <p class="error-alert"></p>
+                    </div>
+                    <div>
+                        <p class="data"></p>
+                        <p class="error-alert"></p>
+                        <p class="data"></p>
+                        <p class="error-alert"></p>
+                        <p class="data"></p>
+                        <p class="error-alert"></p>
+                        <p class="data"></p>
+                        <p class="error-alert"></p>
+                        <p class="data"></p>
+                        <p class="error-alert"></p>
+                    </div>
+                </div>
+                <div>
+                    <button class="ok">Back</button>
+                    <button class="ok">Confirm</button>
+                </div>
+            </div>
+        </div>
+        <div class="modal">
+            <div class="modal-alert">
+                <p id="message"></p>
+                <div id="error-message">
+                </div>
+                <button class="ok">Ok</button>
+            </div>
+        </div>
+        <!-- <div class="modal">
+            <div class="modal-alert">
+                <p>Employee created</p>
+                <a href="./login.html">
+                    <button>Log in</button>
+                </a>
+            </div>
+        </div> -->
     </main>
 </body>
 </html>
