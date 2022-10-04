@@ -1,7 +1,7 @@
 # TrackGenix
 
  ## TrackGenix is an efficiency and time management app, used to track your work team on multiple projects. <br/><br/>
-[Click here to access the TrackGenix landing page](https://silveriac.github.io/BaSP-B2022-Etapa1S2-EricS/week%2006/views/index.html)
+[Click here to access the TrackGenix landing page](https://silveriac.github.io/BaSP-B2022-Etapa1S2-EricS/week%2007/views/index.html)
 
  The page is responsive and has 3 different versions:<br/>
  Mobile version: up to 480 pixels wide<br/>
@@ -47,7 +47,7 @@ This page has been in development for: 6 weeks.<br/>
    Week 4: [Styles updated with Flexbox](https://silveriac.github.io/BaSP-B2022-Etapa1S2-EricS/week%2004/index.html)<br/>
    Week 5: [Javascript excercises](https://silveriac.github.io/BaSP-B2022-Etapa1S2-EricS/week%2005/index.html)<br/>
    Week 6: [Sign in/ Log in pages for employees](https://silveriac.github.io/BaSP-B2022-Etapa1S2-EricS/week%2006/views/index.html)<br/>
-   Week 7: [API requests to log in and sign up as a new user](https://silveriac.github.io/BaSP-B2022-Etapa1S2-EricS/week%2006/views/index.html)<br/><br/>
+   Week 7: [API requests to log in and sign up as a new user](https://silveriac.github.io/BaSP-B2022-Etapa1S2-EricS/week%2007/views/index.html)<br/><br/>
     Technnologies used: HTML, CSS, JavaScript<br/><br/>
 
 
